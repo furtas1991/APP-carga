@@ -271,6 +271,76 @@ body.sheet-open{overflow:hidden}
 .ihead .iname{flex:1;margin:0}
 .isent{display:flex;flex-wrap:wrap;align-items:center;gap:6px;color:var(--muted);font-size:15px;margin-top:6px}
 .isent input{width:54px;text-align:center;padding:8px 4px;font-variant-numeric:tabular-nums}
+.addex{display:flex;gap:8px;margin:14px 0 4px}
+.addex input{flex:1}
+.addex .btn{height:42px;padding:0 16px;flex:none}
+.unitsel{width:auto;padding:6px 10px;font-size:13px;color:var(--muted)}
+.pseg{margin:-8px 0 8px}
+.pseg button{font-size:13px}
+.fl{display:block;font-size:12px;color:var(--muted);margin:10px 0 0}
+.fl input,.fl select{margin-top:4px;color:var(--text);font-size:16px}
+.frm{display:grid;grid-template-columns:1fr 76px 64px;gap:8px;align-items:end}
+.fl.sm input[type=color]{height:42px;padding:4px;cursor:pointer}
+.sprow{display:flex;align-items:center;gap:12px;min-width:0}
+.dot.big{width:14px;height:14px;margin:0}
+.iname-in{font-weight:600;flex:1;margin-right:4px}
+.w-md{width:84px!important}
+.hint-in{margin-top:8px;font-size:14px}
+.toggles{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;font-size:14px}
+.toggles label{display:flex;align-items:center;gap:8px}
+.toggles input,.crow input{width:20px;height:20px;accent-color:var(--accent);padding:0}
+.trow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.trow:last-of-type{border-bottom:0}
+.trow .num{width:84px;flex:none;text-align:center}
+.sw{appearance:none;-webkit-appearance:none;width:50px!important;height:30px;border-radius:999px;background:var(--line);position:relative;flex:none;padding:0;transition:background .2s;cursor:pointer}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.sw:checked{background:var(--ok)}
+.sw:checked::after{transform:translateX(20px)}
+.exrow{align-items:center;gap:6px 8px;flex-wrap:wrap}
+.exname{flex:1 1 100%;background:transparent;padding:6px 4px;font-size:15px;font-weight:500}
+.exrow .unitsel{margin-left:4px}
+.exrow .icon{margin-left:auto}
+.exname:focus{background:var(--field)}
+.incl{display:flex;align-items:center;gap:2px;font-size:13px;color:var(--muted);width:76px;flex:none}
+.incl input{width:44px;padding:6px 2px;text-align:center;font-size:13px}
+button.dl{width:100%;text-align:left}
+/* Construtor de treinos */
+.presets{display:flex;gap:6px;flex-wrap:wrap}
+.bsum{background:var(--card);border-radius:14px;padding:12px}
+.bsum .m{margin-top:8px}
+.prof{width:100%;height:64px;display:block}
+.steps{display:grid;gap:6px;margin-top:8px}
+.st{background:var(--card);border-radius:12px;border-left:4px solid var(--c)}
+.sth{display:flex;align-items:center;padding:2px 4px 2px 0}
+.sts{flex:1;text-align:left;padding:9px 12px;display:flex;flex-direction:column;min-width:0}
+.sts b{font-size:15px;font-weight:600}
+.sts span{font-size:13px;color:var(--muted)}
+.icon.sm{width:30px;height:30px;font-size:16px}
+.ste{padding:2px 12px 14px;display:grid;gap:8px}
+.mseg{display:flex;gap:5px;flex-wrap:wrap}
+.mseg button{padding:7px 11px;border-radius:999px;background:var(--field);font-size:13px}
+.mseg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.lbl2{font-size:12px;font-weight:600;color:var(--muted);margin-top:4px}
+.srow{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+.srow input,.srow select{width:84px;text-align:center;text-align-last:center;font-size:16px}
+.snote{font-size:14px}
+.rep{border:2px dashed color-mix(in srgb,var(--muted) 45%,transparent);border-radius:14px;padding:8px;display:grid;gap:6px}
+.reph{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:2px 2px 2px 6px}
+.reph input{width:58px;text-align:center;font-size:16px}
+.reph .grow{flex:1}
+.addsteps{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 2px}
+.addsteps .pill{display:flex;align-items:center;gap:6px}
+.addsteps .dot{margin:0;background:var(--c)}
+.calc{margin:0;font-size:16px;font-weight:600}
+.tcard .prof{height:60px;margin:14px 0 4px}
+.tsteps{display:grid;gap:8px;margin:12px 0}
+.tst{display:flex;gap:14px;align-items:baseline;border-left:4px solid var(--c);padding:4px 0 4px 12px;font-size:19px}
+.tdurx{font-weight:700;min-width:64px;font-variant-numeric:tabular-nums}
+.tsx b{font-weight:700}
+.tsx em{display:block;font-style:normal;font-size:14px;color:var(--muted)}
+.trep{display:flex;gap:12px;align-items:flex-start;background:var(--field);border-radius:14px;padding:10px 12px}
+.trep > b{font-size:24px;min-width:40px;line-height:1.3}
+.trep > div{flex:1;display:grid;gap:6px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:380px){.sh,.set{grid-template-columns:18px 1fr 1fr 1fr 44px;gap:6px}.stats b{font-size:22px}}
 </style>
@@ -285,6 +355,7 @@ body.sheet-open{overflow:hidden}
   <button data-a="tskip">Saltar</button>
 </div>
 <div id="sheet"></div>
+<datalist id="exlist"></datalist>
 <div id="toast" role="status"></div>
 <div id="trash">Largar aqui para apagar</div>
 <div id="dragwarn" role="alert"></div>
@@ -294,7 +365,7 @@ body.sheet-open{overflow:hidden}
   <button data-a="tab" data-id="week"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Semana</button>
   <button data-a="tab" data-id="history"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Histórico</button>
   <button data-a="tab" data-id="progress"><svg viewBox="0 0 24 24"><path d="M4 19h16M5 15l5-5 4 3 6-7"/></svg>Progresso</button>
-  <button data-a="tab" data-id="plan"><svg viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>Plano</button>
+  <button data-a="tab" data-id="plan"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>Ajustes</button>
 </nav>
 
 <script>
@@ -332,18 +403,32 @@ const DEFAULT_BLOCKS = [
   {id:'b-rz', sport:'run', int:'z2', min:45, note:''},               {id:'b-ri', sport:'run', int:'int', min:50, note:''},
   {id:'b-rl', sport:'run', int:'long', min:100, note:''},
 ];
+const E = (id,name,short,rpe,hint,legs,hard) => ({id,name,short,rpe,hint,legs,hard});
+const endInts = legs => [E('rec','Recuperação','Rec',2,'RPE 2, só soltar',false,false), E('z2','Fácil (Z2)','Z2',3,'RPE 3–4, conversável',false,false),
+  E('tempo','Tempo / limiar','Limiar',6,'RPE 6–7, controlado',legs.includes('tempo'),true), E('int','Intervalos','Interv',8,'RPE 8–9 nas séries',legs.includes('int'),true),
+  E('long','Longo','Longo',5,'RPE 4–5, constante',legs.includes('long'),true)];
+const DEFAULT_CFG = {
+  sports:[{id:'gym',name:'Ginásio',short:'Gin',color:'#8e8e93',kind:'gym'}, {id:'bike',name:'Bike',short:'Bike',color:'#ff9500',kind:'end'},
+    {id:'run',name:'Corrida',short:'Corr',color:'#5e5ce6',kind:'end'}, {id:'swim',name:'Natação',short:'Nat',color:'#32ade6',kind:'end'}],
+  ints:{gym:[E('heavy','Pernas pesado','Forte',7,'Agachamento e peso morto pesados',true,true), E('mod','Pernas moderado','Médio',6,'Unilateral, carga média',true,false),
+    E('upper','Tronco e core','Tronco',4,'Sem carga nas pernas',false,false)], bike:endInts(['int','long']), run:endInts(['tempo','int','long']), swim:endInts([])},
+  rules:{sameDay:true, eve:true, after:true, consecutive:true, noRest:true, maxHard:3, ramp:30},
+  prog:{rpe:8.5, inc:2.5},
+  durations:[30,45,60,75,90,120,180],
+};
+const SP_COLORS = ['#34c759','#ff2d55','#af52de','#ffcc00','#a2845e','#30b0c7','#ff6482'];
 const RPE = ['',6,6.5,7,7.5,8,8.5,9,9.5,10];
 
 /* ---------- Estado ---------- */
 const uid = () => Math.random().toString(36).slice(2,8) + Date.now().toString(36).slice(-4);
 const clone = o => JSON.parse(JSON.stringify(o));
-const seed = () => ({v:1, exercises:clone(DEFAULT_EX), templates:clone(DEFAULT_TPL), sessions:[], active:null, plan:[], blocks:clone(DEFAULT_BLOCKS)});
-function migrate(){ S.plan ||= []; S.blocks ||= clone(DEFAULT_BLOCKS); S.templates.forEach(t => { if(!t.legs) t.legs = t.id === 'A' ? 'heavy' : 'mod'; }); }
+const seed = () => ({v:1, exercises:clone(DEFAULT_EX), templates:clone(DEFAULT_TPL), sessions:[], active:null, plan:[], blocks:clone(DEFAULT_BLOCKS), cfg:clone(DEFAULT_CFG)});
+function migrate(){ S.plan ||= []; S.blocks ||= clone(DEFAULT_BLOCKS); S.cfg ||= clone(DEFAULT_CFG); S.templates.forEach(t => { if(!t.legs) t.legs = t.id === 'A' ? 'heavy' : 'mod'; }); }
 function load(){ try{ const r = localStorage.getItem(KEY); if(r) return JSON.parse(r); }catch(e){} return seed(); }
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){ toast('Não foi possível guardar neste dispositivo'); } }
 let S = load(); migrate();
 let tab = 'today';
-const ui = {open:null, tpl:null, prog:null, week:null, draft:null, sel:null};
+const ui = {open:null, tpl:null, prog:null, week:null, draft:null, sel:null, seg:'gym', spOpen:null, stepOpen:null};
 const timer = {end:0, iv:null};
 
 /* ---------- Utilitários ---------- */
@@ -355,7 +440,7 @@ const fmtDate = d => new Date(d).toLocaleDateString('pt-PT',{weekday:'short', da
 const fmt1 = n => (Math.round(n*10)/10).toLocaleString('pt-PT');
 const e1rm = (kg,r) => num(kg) > 0 ? num(kg) * (1 + num(r)/30) : 0;   // Epley
 const unitLabel = e => e.unit === 'time' ? 's' : 'reps';
-const step = e => e.inc || 2.5;
+const step = e => num(e.inc) || num(S.cfg.prog.inc) || 2.5;
 const volume = s => s.entries.reduce((a,en) => ex(en.exId).unit === 'time' ? a :
   a + en.sets.reduce((b,x) => b + num(x.kg)*num(x.reps), 0), 0);
 
@@ -386,7 +471,7 @@ function suggest(item){
   const maxRpe = Math.max(0, ...s.map(x => num(x.rpe)));
   const prev = summarize(last);
   const kgTxt = kg ? `${fmt1(kg)} kg` : '';
-  if(s.length >= item.sets && minR >= item.max && maxRpe <= 8.5){
+  if(s.length >= item.sets && minR >= item.max && maxRpe <= num(S.cfg.prog.rpe)){
     if(e.unit === 'kg') return {kg:kg + step(e), reps:item.min, note:`Sobe para ${fmt1(kg + step(e))} kg`, prev};
     return {kg:kg || '', reps:item.max, note:'Topo atingido: usa uma variante mais difícil', prev};
   }
@@ -404,15 +489,22 @@ function buildEntry(item){
 }
 
 /* ---------- Vistas ---------- */
-/* ---------- Semana: planeamento e gestão de carga ---------- */
-const SPORT = {gym:'Ginásio', bike:'Bike', run:'Corrida', swim:'Natação'};
-const END = [['rec','Recuperação',2],['z2','Fácil (Z2)',3],['tempo','Tempo / limiar',6],['int','Intervalos',8],['long','Longo',5]];
-const INT = {gym:[['heavy','Pernas pesado',7],['mod','Pernas moderado',6],['upper','Tronco e core',4]], bike:END, run:END, swim:END};
-const intOf = (s,k) => INT[s].find(x => x[0] === k) || INT[s][0];
-const pLoad = p => num(p.min) * intOf(p.sport, p.int)[2];               // carga = minutos × RPE (sRPE)
-const legsGym = p => p.sport === 'gym' && (p.int === 'heavy' || p.int === 'mod');
-const legsHard = p => (p.sport === 'run' && ['tempo','int','long'].includes(p.int)) || (p.sport === 'bike' && ['int','long'].includes(p.int));
-const isHard = p => p.sport === 'gym' ? p.int === 'heavy' : ['tempo','int','long'].includes(p.int);
+/* ---------- Semana: planeamento e gestão de carga (tudo personalizável em S.cfg) ---------- */
+const sp = id => S.cfg.sports.find(s => s.id === id) || {id, name:'(removida)', color:'#8e8e93', kind:'end'};
+const sportIds = () => S.cfg.sports.map(s => s.id);
+const spName = id => sp(id).name;
+const spShort = id => sp(id).short || sp(id).name.slice(0,4);
+const col = id => sp(id).color;
+const intO = (s,k) => { const l = S.cfg.ints[s] || []; return l.find(x => x.id === k) || l[0] || {id:k, name:'–', rpe:5}; };
+const INTS = s => (S.cfg.ints[s] || []).map(i => [i.id, i.name, num(i.rpe), i.hint || '']);
+const intOf = (s,k) => { const i = intO(s,k); return [i.id, i.name, num(i.rpe), i.hint || '']; };
+const intShort = p => { const i = intO(p.sport,p.int); return i.short || i.name.split(/[ (\/]/)[0].slice(0,6); };
+const isGym = p => sp(p.sport).kind === 'gym';
+const pLoad = p => (p.steps && p.steps.length && !isGym(p)) ? wTotals(p).load : num(p.min) * intOf(p.sport, p.int)[2];               // carga = minutos × RPE (sRPE)
+const legsGym = p => isGym(p) && !!intO(p.sport,p.int).legs;
+const legsHard = p => !isGym(p) && !!intO(p.sport,p.int).legs;
+const isHard = p => !!intO(p.sport,p.int).hard;
+const heavyGym = p => legsGym(p) && isHard(p);
 const dkey = d => { const x = new Date(d); return `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`; };
 const pkey = k => { const [y,m,d] = k.split('-').map(Number); return new Date(y, m-1, d); };
 const addDays = (k,n) => { const d = pkey(k); d.setDate(d.getDate()+n); return dkey(d); };
@@ -420,26 +512,26 @@ const weekStartKey = d => { const x = new Date(d); x.setDate(x.getDate() - ((x.g
 const inWeek = (k,start) => k >= start && k <= addDays(start,6);
 const dayName = k => pkey(k).toLocaleDateString('pt-PT',{weekday:'long'});
 const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
-const pLabel = p => `${SPORT[p.sport].toLowerCase()} (${intOf(p.sport,p.int)[1].toLowerCase()})`;
+const pLabel = p => `${spName(p.sport).toLowerCase()} (${intOf(p.sport,p.int)[1].toLowerCase()})`;
 const weekLoad = (plan,start) => plan.filter(p => inWeek(p.date,start)).reduce((a,p) => a + pLoad(p), 0);
 
 function issues(plan, start){
-  const at = k => plan.filter(p => p.date === k), out = [];
+  const at = k => plan.filter(p => p.date === k), out = [], RU = S.cfg.rules;
   for(let i = 0; i < 7; i++){
     const k = addDays(start,i), k1 = addDays(k,1), t = at(k), n = at(k1);
-    const g = t.find(legsGym), q = t.find(legsHard), nq = n.find(legsHard), ng = n.find(p => p.sport === 'gym' && p.int === 'heavy');
-    if(g && q) out.push({lvl:'high', keys:[k], msg:`${cap(dayName(k))}: pernas no ginásio e ${pLabel(q)} no mesmo dia.`});
-    if(g && nq) out.push({lvl:'high', keys:[k,k1], msg:`${cap(dayName(k))}: pernas no ginásio na véspera de ${pLabel(nq)}.`});
-    if(q && ng) out.push({lvl:'low', keys:[k,k1], msg:`${cap(dayName(k1))}: pernas pesado depois de ${pLabel(q)}. Baixa a carga se as pernas estiverem cansadas.`});
-    if(!(g && nq) && !(q && ng) && t.some(isHard) && n.some(isHard))
+    const g = t.find(legsGym), q = t.find(legsHard), nq = n.find(legsHard), ng = n.find(heavyGym);
+    if(RU.sameDay && g && q) out.push({lvl:'high', keys:[k], msg:`${cap(dayName(k))}: pernas no ginásio e ${pLabel(q)} no mesmo dia.`});
+    if(RU.eve && g && nq) out.push({lvl:'high', keys:[k,k1], msg:`${cap(dayName(k))}: pernas no ginásio na véspera de ${pLabel(nq)}.`});
+    if(RU.after && q && ng) out.push({lvl:'low', keys:[k,k1], msg:`${cap(dayName(k1))}: pernas pesado depois de ${pLabel(q)}. Baixa a carga se as pernas estiverem cansadas.`});
+    if(RU.consecutive && !(RU.eve && g && nq) && !(RU.after && q && ng) && t.some(isHard) && n.some(isHard))
       out.push({lvl:'low', keys:[k,k1], msg:`${cap(dayName(k))} e ${dayName(k1)}: dois dias duros seguidos.`});
   }
   const days = [...Array(7)].map((_,i) => at(addDays(start,i)));
-  if(days.every(d => d.length)) out.push({lvl:'low', keys:[], msg:'Sem dia de descanso esta semana.'});
+  if(RU.noRest && days.every(d => d.length)) out.push({lvl:'low', keys:[], msg:'Sem dia de descanso esta semana.'});
   const hard = days.filter(d => d.some(isHard)).length;
-  if(hard > 3) out.push({lvl:'low', keys:[], msg:`${hard} dias duros. Em fase de base, 2 a 3 costumam chegar.`});
+  if(num(RU.maxHard) > 0 && hard > num(RU.maxHard)) out.push({lvl:'low', keys:[], msg:`${hard} dias duros. O teu limite é ${num(RU.maxHard)}.`});
   const tot = weekLoad(plan,start), prev = weekLoad(plan,addDays(start,-7));
-  if(prev > 0 && tot > prev*1.3) out.push({lvl:'low', keys:[], msg:`Carga ${Math.round((tot/prev-1)*100)}% acima da semana anterior.`});
+  if(num(RU.ramp) > 0 && prev > 0 && tot > prev*(1 + num(RU.ramp)/100)) out.push({lvl:'low', keys:[], msg:`Carga ${Math.round((tot/prev-1)*100)}% acima da semana anterior.`});
   return out;
 }
 
@@ -449,59 +541,200 @@ function newIssues(base, item){
   const st = weekStartKey(pkey(item.date)), before = new Set(issues(base, st).map(x => x.msg));
   return issues(base.concat([item]), st).filter(x => !before.has(x.msg));
 }
-const SPORT_S = {gym:'Gin', bike:'Bike', run:'Corr', swim:'Nat'};
 const SHORT = {rec:'Rec', z2:'Z2', tempo:'Limiar', int:'Interv', long:'Longo', heavy:'Forte', mod:'Médio', upper:'Tronco'};
 const GUIDE = {rec:'Muito fácil, RPE 2. É só para soltar.', z2:'Conversável, RPE 3 a 4.', tempo:'Controlado mas exigente, RPE 6 a 7.',
   int:'Duro nas séries, RPE 8 a 9. Recupera bem entre elas.', long:'Fácil e constante, RPE 4 a 5. Treina a nutrição.'};
-const pName = p => p.sport === 'gym' && tpl(p.tpl) ? tpl(p.tpl).name.split(',')[0] : SPORT[p.sport];
+const pName = p => p.title || (isGym(p) && tpl(p.tpl) ? tpl(p.tpl).name.split(',')[0] : spName(p.sport));
 function chipHTML(p, attrs){
-  const t = p.sport === 'gym' && tpl(p.tpl);
-  const s = t ? ('Gin ' + (t.id.length <= 2 ? t.id : '')).trim() : SPORT_S[p.sport];
-  return `<div class="chip ${p.done ? 'done' : ''}" style="--c:var(--${p.sport})" ${attrs}>
+  const t = isGym(p) && tpl(p.tpl);
+  const s = p.title ? p.title.slice(0,8) : t ? (spShort(p.sport) + ' ' + (t.id.length <= 2 ? t.id : '')).trim() : spShort(p.sport);
+  return `<div class="chip ${p.done ? 'done' : ''}" style="--c:${col(p.sport)}" ${attrs}>
     <b><span class="s">${esc(s)}</span><span class="f">${esc(pName(p))}</span></b>
-    <span><span class="s">${SHORT[p.int]}</span><span class="f">${intOf(p.sport,p.int)[1]}</span></span>
+    <span><span class="s">${esc(intShort(p))}</span><span class="f">${intOf(p.sport,p.int)[1]}</span></span>
     <span>${p.min}'${p.done ? ' ✓' : ''}</span></div>`;
 }
 const pItem = p => `<button class="pitem ${p.done ? 'done' : ''}" data-a="editPlan" data-id="${p.id}">
-  <span class="dot" style="background:var(--${p.sport})"></span>
+  <span class="dot" style="background:${col(p.sport)}"></span>
   <span class="pn">${esc(pName(p))}${p.note ? `<span class="m">, ${esc(p.note.split('\n')[0])}</span>` : ''}</span>
   <span class="m">${intOf(p.sport,p.int)[1]}, ${p.min} min</span>${p.done ? '<span class="ck">✓</span>' : ''}</button>`;
 
 const GUIDE_S = {rec:'RPE 2, só soltar', z2:'RPE 3–4, conversável', tempo:'RPE 6–7, controlado', int:'RPE 8–9 nas séries', long:'RPE 4–5, constante',
   heavy:'Agachamento e peso morto pesados', mod:'Unilateral, carga média', upper:'Sem carga nas pernas'};
 
-/* Folha para criar ou editar um treino do calendário */
+/* ---------- Construtor de treinos estruturados (ao estilo TrainingPeaks / Garmin Connect) ---------- */
+const STEP_T = {warm:['Aquecimento','#ff9f0a',3], steady:['Contínuo','#5e5ce6',4], work:['Intervalo','#ff375f',7], rec:['Recuperação','#34c759',2], cool:['Retorno à calma','#32ade6',2]};
+const TGT = {none:'Sem alvo', zone:'Zona', rpe:'RPE', pace:'Ritmo', hr:'FC', power:'Potência'};
+const tgtKinds = s => ['none','zone','rpe'].concat(s === 'bike' ? ['power','hr'] : s === 'run' ? ['pace','hr'] : s === 'swim' ? ['pace'] : ['hr']);
+const ZRPE = {1:2, 2:3, 3:5, 4:7, 5:9};
+const parseTime = t => { t = String(t || '').trim(); if(!t) return 0;
+  if(t.includes(':')){ const p = t.split(':').map(x => parseFloat(x) || 0); return p.length === 3 ? p[0]*3600 + p[1]*60 + p[2] : p[0]*60 + p[1]; }
+  return num(t) * 60; };                                         // número simples = minutos
+const parsePace = t => { t = String(t || '').trim(); if(!t) return 0; if(t.includes(':')){ const [m,s] = t.split(':'); return (parseFloat(m) || 0)*60 + (parseFloat(s) || 0); } return num(t)*60; };
+const fmtSec = s => { s = Math.round(s); if(s < 60) return s + ' s'; const h = Math.floor(s/3600), m = Math.floor(s%3600/60), r = s%60;
+  return h ? `${h}h${String(m).padStart(2,'0')}` : r ? `${m}:${String(r).padStart(2,'0')}` : `${m}'`; };
+const fmtDist = m => m >= 1000 ? `${fmt1(m/1000)} km` : `${Math.round(m)} m`;
+const stepMeters = s => s.dur.kind === 'dist' ? num(s.dur.raw) * (s.dur.unit === 'km' ? 1000 : 1) : 0;
+function stepSec(s, sport){
+  if(s.dur.kind === 'time') return parseTime(s.dur.raw);
+  if(s.dur.kind === 'lap') return 300;
+  const m = stepMeters(s); let pace = 0;
+  if(s.tg.kind === 'pace'){ const a = parsePace(s.tg.lo), b = parsePace(s.tg.hi) || a; pace = (a + b) / 2; }
+  if(sport === 'swim') return m / 100 * (pace || 120);
+  if(sport === 'bike') return m / 8.33;
+  return m / 1000 * (pace || 330);
+}
+function stepRpe(s){
+  const t = s.tg;
+  if(t.kind === 'zone' && (t.lo || t.hi)){ const a = ZRPE[t.lo] || ZRPE[t.hi], b = ZRPE[t.hi] || a; return (a + b) / 2; }
+  if(t.kind === 'rpe' && num(t.lo)){ const a = num(t.lo), b = num(t.hi) || a; return (a + b) / 2; }
+  return STEP_T[s.type][2];
+}
+const flat = steps => steps.flatMap(s => s.type === 'repeat' ? Array.from({length:Math.max(1, parseInt(s.times) || 1)}, () => flat(s.steps)).flat() : [s]);
+function wTotals(p){
+  const f = flat(p.steps || []);
+  return {sec:f.reduce((a,s) => a + stepSec(s,p.sport), 0), m:f.reduce((a,s) => a + stepMeters(s), 0),
+    load:f.reduce((a,s) => a + stepSec(s,p.sport)/60 * stepRpe(s), 0)};
+}
+function tgtText(t, sport){
+  if(!t || t.kind === 'none' || !(t.lo || t.hi)) return '';
+  const r = (a,b,u='') => b && b !== a && a ? `${a}–${b}${u}` : `${a || b}${u}`;
+  if(t.kind === 'zone') return 'Z' + r(t.lo, t.hi);
+  if(t.kind === 'rpe') return 'RPE ' + r(t.lo, t.hi);
+  if(t.kind === 'pace') return r(t.lo, t.hi, sport === 'swim' ? '/100 m' : '/km');
+  if(t.kind === 'hr') return r(t.lo, t.hi, ' bpm');
+  return r(t.lo, t.hi, ' W');
+}
+const durText = s => s.dur.kind === 'time' ? fmtSec(parseTime(s.dur.raw)) : s.dur.kind === 'dist' ? fmtDist(stepMeters(s)) : 'até lap';
+function profile(p, h = 64){
+  const f = flat(p.steps || []); if(!f.length) return '';
+  const secs = f.map(s => Math.max(stepSec(s,p.sport), 1)), tot = secs.reduce((a,b) => a + b, 0); let x = 0;
+  return `<svg class="prof" viewBox="0 0 300 ${h}" preserveAspectRatio="none" role="img" aria-label="Perfil do treino">${f.map((s,i) => {
+    const w = secs[i]/tot*300, ht = Math.max(stepRpe(s)/10*(h-4), 4);
+    const r = `<rect x="${x.toFixed(2)}" y="${(h-ht).toFixed(2)}" width="${Math.max(w-.8,.6).toFixed(2)}" height="${ht.toFixed(2)}" rx="1.5" fill="${STEP_T[s.type][1]}"/>`;
+    x += w; return r; }).join('')}</svg>`;
+}
+const newStep = (type, raw, z) => ({id:uid(), type, dur:{kind:'time', raw, unit:'km'}, tg:{kind:'zone', lo:String(z), hi:''}, note:''});
+const SDEF = {warm:['15',2], steady:['40',2], work:['3',4], rec:['2',1], cool:['10',1]};
+const mk = t => newStep(t, ...SDEF[t]);
+const rep = (n, steps) => ({id:uid(), type:'repeat', times:n, steps});
+const PRESETS = {
+  int:['Intervalos', () => [mk('warm'), rep(5, [mk('work'), mk('rec')]), mk('cool')]],
+  thr:['Limiar', () => [mk('warm'), rep(2, [newStep('work','15',4), newStep('rec','5',2)]), mk('cool')]],
+  z2:['Contínuo Z2', () => [newStep('steady','60',2)]],
+  brick:['Progressivo', () => [newStep('warm','10',1), newStep('steady','20',2), newStep('steady','15',3), newStep('work','5',4), newStep('cool','5',1)]],
+  blank:['Em branco', () => [mk('warm'), mk('cool')]],
+};
+function findStep(steps, id){
+  for(let i = 0; i < steps.length; i++){ const s = steps[i]; if(s.id === id) return {s, arr:steps, i};
+    if(s.type === 'repeat'){ const r = findStep(s.steps, id); if(r) return r; } }
+  return null;
+}
+const stp = id => findStep(ui.draft.steps, id).s;
+const mvBtns = id => `<button class="icon sm" data-a="stMv" data-id="${id}" data-d="-1" aria-label="Subir">↑</button><button class="icon sm" data-a="stMv" data-id="${id}" data-d="1" aria-label="Descer">↓</button><button class="icon sm" data-a="stDel" data-id="${id}" aria-label="Apagar">×</button>`;
+
+const bsumInner = dr => { const tt = wTotals(dr); return `${profile(dr)}<div class="m">${fmtSec(tt.sec)}${tt.m ? `, ${fmtDist(tt.m)}` : ''}, carga ${Math.round(tt.load)}</div>`; };
+// Atualiza gráfico, totais e resumo do passo sem redesenhar os campos (não tira o foco a quem está a escrever)
+function liveRefresh(){
+  const dr = ui.draft; if(!dr || !dr.steps || !dr.steps.length) return;
+  const bs = $('.bsum'); if(bs) bs.innerHTML = bsumInner(dr);
+  const c = $('.calc'); if(c) c.textContent = `${fmtSec(wTotals(dr).sec)}, calculado a partir da estrutura`;
+  const r = ui.stepOpen && findStep(dr.steps, ui.stepOpen), el = $('.st.open .sts span');
+  if(r && el) el.textContent = [durText(r.s), tgtText(r.s.tg, dr.sport), r.s.note].filter(Boolean).join(', ');
+}
+function builder(dr){
+  const steps = dr.steps || [];
+  if(!steps.length) return `<div class="lbl">Estrutura do treino</div>
+    <div class="presets">${Object.entries(PRESETS).map(([k,v]) => `<button class="pill" data-a="stPreset" data-k="${k}">${v[0]}</button>`).join('')}</div>
+    <p class="m">Escolhe um modelo e ajusta cada passo: aquecimento, intervalos, repetições, recuperação e retorno à calma.</p>`;
+  const tt = wTotals(dr);
+  return `<div class="lbl">Estrutura do treino</div>
+    <div class="bsum">${bsumInner(dr)}</div>
+    <div class="steps">${steps.map(s => stepHTML(s, dr.sport)).join('')}</div>
+    <div class="addsteps">${Object.keys(STEP_T).map(t => `<button class="pill" data-a="stAdd" data-t="${t}" style="--c:${STEP_T[t][1]}"><span class="dot"></span>${STEP_T[t][0]}</button>`).join('')}
+      <button class="pill" data-a="stAdd" data-t="repeat">↻ Repetição</button></div>
+    <button class="link danger" data-a="stClear">Limpar estrutura</button>`;
+}
+function stepHTML(s, sport){
+  if(s.type === 'repeat') return `<div class="rep"><div class="reph"><span>Repetir</span>
+      <input inputmode="numeric" value="${s.times}" data-c="repT" data-id="${s.id}" data-rr="1" aria-label="Número de repetições"><span>vezes</span><span class="grow"></span>${mvBtns(s.id)}</div>
+    ${s.steps.map(x => stepHTML(x, sport)).join('')}
+    <button class="link" data-a="stAdd" data-t="work" data-in="${s.id}">Adicionar passo à repetição</button></div>`;
+  const open = ui.stepOpen === s.id, T = STEP_T[s.type];
+  return `<div class="st ${open ? 'open' : ''}" style="--c:${T[1]}">
+    <div class="sth"><button class="sts" data-a="stOpen" data-id="${s.id}" aria-expanded="${open}"><b>${T[0]}</b>
+      <span>${esc([durText(s), tgtText(s.tg,sport), s.note].filter(Boolean).join(', '))}</span></button>${mvBtns(s.id)}</div>
+    ${open ? stepEditor(s, sport) : ''}</div>`;
+}
+function stepEditor(s, sport){
+  const seg = (a, opts, val) => `<div class="mseg">${opts.map(([k,n]) => `<button data-a="${a}" data-id="${s.id}" data-k="${k}" aria-pressed="${val === k}">${n}</button>`).join('')}</div>`;
+  const t = s.tg;
+  const zsel = (f,v) => `<select data-c="stTg" data-id="${s.id}" data-f="${f}">${['','1','2','3','4','5'].map(z => `<option value="${z}" ${String(v) === z ? 'selected' : ''}>${z ? 'Z' + z : '–'}</option>`).join('')}</select>`;
+  const inp = (f,v,ph,mode) => `<input inputmode="${mode}" value="${esc(v || '')}" placeholder="${ph}" data-c="stTg" data-id="${s.id}" data-f="${f}" data-rr="1">`;
+  const pu = sport === 'swim' ? '/100 m' : '/km';
+  const fields = t.kind === 'zone' ? `${zsel('lo',t.lo)}<span>a</span>${zsel('hi',t.hi)}`
+    : t.kind === 'rpe' ? `${inp('lo',t.lo,'6','decimal')}<span>a</span>${inp('hi',t.hi,'7','decimal')}`
+    : t.kind === 'pace' ? `${inp('lo',t.lo,sport === 'swim' ? '1:45' : '4:30','text')}<span>a</span>${inp('hi',t.hi,sport === 'swim' ? '1:50' : '4:40','text')}<span>${pu}</span>`
+    : t.kind === 'hr' ? `${inp('lo',t.lo,'140','numeric')}<span>a</span>${inp('hi',t.hi,'150','numeric')}<span>bpm</span>`
+    : t.kind === 'power' ? `${inp('lo',t.lo,'200','numeric')}<span>a</span>${inp('hi',t.hi,'220','numeric')}<span>W</span>` : '';
+  return `<div class="ste">
+    ${seg('stType', Object.entries(STEP_T).map(([k,v]) => [k, v[0]]), s.type)}
+    <div class="lbl2">Duração</div>
+    ${seg('stDurK', [['time','Tempo'],['dist','Distância'],['lap','Até carregar no lap']], s.dur.kind)}
+    ${s.dur.kind === 'time' ? `<div class="srow"><input value="${esc(s.dur.raw)}" placeholder="15" data-c="stDur" data-id="${s.id}" data-rr="1" aria-label="Duração"><span>minutos, ou min:seg como 2:30</span></div>`
+      : s.dur.kind === 'dist' ? `<div class="srow"><input inputmode="decimal" value="${esc(s.dur.raw)}" placeholder="800" data-c="stDur" data-id="${s.id}" data-rr="1" aria-label="Distância">
+        <select data-c="stUnit" data-id="${s.id}"><option value="m" ${s.dur.unit === 'm' ? 'selected' : ''}>m</option><option value="km" ${s.dur.unit === 'km' ? 'selected' : ''}>km</option></select></div>`
+      : '<p class="m">O passo continua até carregares no botão lap do relógio.</p>'}
+    <div class="lbl2">Alvo</div>
+    ${seg('stTgK', tgtKinds(sport).map(k => [k, TGT[k]]), t.kind)}
+    ${fields ? `<div class="srow">${fields}</div>` : ''}
+    <input class="snote" value="${esc(s.note || '')}" placeholder="Nota do passo, por exemplo cadência alta" data-c="stNote" data-id="${s.id}" data-rr="1">
+  </div>`;
+}
+function stepsToday(p){
+  const one = s => { const tg = tgtText(s.tg, p.sport);
+    return `<div class="tst" style="--c:${STEP_T[s.type][1]}"><span class="tdurx">${esc(durText(s))}</span>
+      <span class="tsx">${STEP_T[s.type][0]}${tg ? ` <b>${esc(tg)}</b>` : ''}${s.note ? `<em>${esc(s.note)}</em>` : ''}</span></div>`; };
+  return `${profile(p)}<div class="tsteps">${p.steps.map(s => s.type === 'repeat'
+    ? `<div class="trep"><b>${s.times}×</b><div>${s.steps.map(one).join('')}</div></div>` : one(s)).join('')}</div>`;
+}
+
+/* Folha para criar ou editar um treino do calendário, ou um bloco rápido */
 function vSheet(){
   const dr = ui.draft; if(!dr) return '';
-  const isNew = !dr.id, gym = dr.sport === 'gym';
-  const warn = newIssues(S.plan.filter(p => p.id !== dr.id), {...dr, min:num(dr.min)}).filter(x => x.keys.includes(dr.date) || !x.keys.length);
+  const isBlock = dr.mode === 'block', isNew = !dr.id, gym = isGym(dr);
+  const title = isBlock ? (isNew ? 'Novo bloco rápido' : 'Editar bloco') : (isNew ? 'Novo treino' : 'Editar treino');
+  const warn = isBlock ? [] : newIssues(S.plan.filter(p => p.id !== dr.id), {...dr, min:num(dr.min)}).filter(x => x.keys.includes(dr.date) || !x.keys.length);
   return `<div class="sheet-bg" data-a="closePlan"></div>
-  <div class="sheet" role="dialog" aria-modal="true" aria-label="${isNew ? 'Novo treino' : 'Editar treino'}">
-    <div class="sh-head"><div><div class="t">${isNew ? 'Novo treino' : 'Editar treino'}</div><div class="m">${cap(dayName(dr.date))}, ${pkey(dr.date).getDate()}</div></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="${title}">
+    <div class="sh-head"><div><div class="t">${title}</div><div class="m">${isBlock ? 'Fica disponível em todos os dias' : `${cap(dayName(dr.date))}, ${pkey(dr.date).getDate()}`}</div></div>
       <button class="icon close" data-a="closePlan" aria-label="Fechar">×</button></div>
     <div class="sh-body">
-      ${isNew && S.blocks.length ? `<div class="lbl">Rápido, um toque e fica marcado</div>
-        <div class="quick">${S.blocks.map(b => `<button class="qb" style="--c:var(--${b.sport})" data-a="quickAdd" data-id="${b.id}"><b>${esc(pName(b))}</b><span>${intOf(b.sport,b.int)[1]}, ${b.min} min</span></button>`).join('')}</div>
+      ${isNew && !isBlock && S.blocks.length ? `<div class="lbl">Rápido, um toque e fica marcado</div>
+        <div class="quick">${S.blocks.map(b => `<button class="qb" style="--c:${col(b.sport)}" data-a="quickAdd" data-id="${b.id}"><b>${esc(pName(b))}</b><span>${esc(intOf(b.sport,b.int)[1])}, ${b.min} min</span></button>`).join('')}</div>
         <div class="lbl sep">Ou cria à medida</div>` : ''}
-      <div class="tiles">${Object.keys(SPORT).map(s => `<button class="tile" style="--c:var(--${s})" data-a="dSport" data-s="${s}" aria-pressed="${dr.sport === s}"><span class="dot"></span>${SPORT[s]}</button>`).join('')}</div>
+      <div class="tiles">${sportIds().map(s => `<button class="tile" style="--c:${col(s)}" data-a="dSport" data-s="${s}" aria-pressed="${dr.sport === s}"><span class="dot"></span>${esc(spName(s))}</button>`).join('')}</div>
       ${gym ? `<div class="lbl">Treino de ginásio</div><div class="opts">
         ${S.templates.map(t => `<button class="opt" data-a="dTplB" data-id="${t.id}" aria-pressed="${dr.tpl === t.id}"><b>${esc(t.name)}</b><span>${t.items.length} exercícios</span></button>`).join('')}
         <button class="opt" data-a="dTplB" data-id="" aria-pressed="${!dr.tpl}"><b>Sem treino associado</b></button></div>` : ''}
       <div class="lbl">Intensidade</div>
-      <div class="opts">${INT[dr.sport].map(([k,n]) => `<button class="opt" data-a="dIntB" data-k="${k}" aria-pressed="${dr.int === k}"><b>${n}</b><span>${GUIDE_S[k]}</span></button>`).join('')}</div>
-      <div class="lbl">Duração</div>
+      <div class="opts">${INTS(dr.sport).map(([k,n,r,hint]) => `<button class="opt" data-a="dIntB" data-k="${k}" aria-pressed="${dr.int === k}"><b>${esc(n)}</b><span>${esc(hint || 'RPE ' + r)}</span></button>`).join('')}</div>
+      ${!gym ? builder(dr) : ''}
+      ${!gym && dr.steps && dr.steps.length ? `<div class="lbl">Duração</div><p class="calc">${fmtSec(wTotals(dr).sec)}, calculado a partir da estrutura</p>` : `<div class="lbl">Duração</div>
       <div class="dur"><button class="stp" data-a="dMinStep" data-d="-5" aria-label="Menos 5 minutos">−</button>
         <label class="dv"><input inputmode="numeric" value="${esc(dr.min)}" data-c="dMin" aria-label="Minutos"><span>min</span></label>
         <button class="stp" data-a="dMinStep" data-d="5" aria-label="Mais 5 minutos">+</button></div>
-      <div class="chips">${[30,45,60,75,90,120,180].map(m => `<button class="pill" data-a="dMinSet" data-m="${m}" aria-pressed="${num(dr.min) === m}">${m}</button>`).join('')}</div>
-      <div class="lbl">Estrutura <span class="m">(opcional)</span></div>
-      <textarea data-c="dNote" rows="3" placeholder="Por exemplo&#10;15' aquecimento&#10;6×800 m a 4:30, 2' rec">${esc(dr.note || '')}</textarea>
-      <label class="crow"><input type="checkbox" data-c="dBlock" ${dr.asBlock ? 'checked' : ''}> Guardar também como bloco rápido</label>
+      <div class="chips">${S.cfg.durations.map(m => `<button class="pill" data-a="dMinSet" data-m="${m}" aria-pressed="${num(dr.min) === m}">${m}</button>`).join('')}</div>`}
+      <div class="lbl">Nome <span class="m">(opcional)</span></div>
+      <input value="${esc(dr.title || '')}" data-c="dTitle" placeholder="Por exemplo Rolo com o clube, Brick, Open water">
+      <div class="lbl">Notas <span class="m">(opcional)</span></div>
+      <textarea data-c="dNote" rows="2" placeholder="Percurso, material, sensações a procurar">${esc(dr.note || '')}</textarea>
+      ${isBlock ? '' : `<label class="crow"><input type="checkbox" data-c="dBlock" ${dr.asBlock ? 'checked' : ''}> Guardar também como bloco rápido</label>`}
       ${warn.map(w => `<p class="pwarn ${w.lvl}">${esc(w.msg)}</p>`).join('')}
     </div>
     <div class="sh-foot">
-      <button class="btn primary full big" data-a="savePlan">${isNew ? `Adicionar a ${dayName(dr.date)}` : 'Guardar alterações'}</button>
-      ${!isNew ? `<div class="frow">${gym && dr.tpl && !dr.done ? '<button class="link" data-a="startPlan">Começar treino</button>' : ''}
+      <button class="btn primary full big" data-a="savePlan">${isBlock ? 'Guardar bloco' : isNew ? `Adicionar a ${dayName(dr.date)}` : 'Guardar alterações'}</button>
+      ${isBlock && !isNew ? '<div class="frow"><button class="link danger" data-a="delPlan">Apagar bloco</button></div>' : ''}
+      ${!isBlock && !isNew ? `<div class="frow">${gym && dr.tpl && !dr.done ? '<button class="link" data-a="startPlan">Começar treino</button>' : ''}
         <button class="link" data-a="donePlan">${dr.done ? 'Marcar por fazer' : 'Marcar feito'}</button>
         <button class="link danger" data-a="delPlan">Apagar</button></div>` : ''}
     </div>
@@ -516,7 +749,7 @@ function vWeek(){
   const tot = weekLoad(S.plan,start), prev = weekLoad(S.plan,addDays(start,-7));
   const mins = all.reduce((a,p) => a + num(p.min), 0);
   const iss = issues(S.plan,start), flag = new Set(iss.filter(x => x.lvl === 'high').flatMap(x => x.keys));
-  const bySport = Object.keys(SPORT).map(s => [s, all.filter(p => p.sport === s).reduce((a,p) => a + num(p.min), 0)]).filter(x => x[1]);
+  const bySport = sportIds().map(s => [s, all.filter(p => p.sport === s).reduce((a,p) => a + num(p.min), 0)]).filter(x => x[1]);
   const hm = m => `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`;
   const end = pkey(addDays(start,6)), st = pkey(start);
   const range = `${st.getDate()}${st.getMonth() !== end.getMonth() ? ' ' + st.toLocaleDateString('pt-PT',{month:'short'}) : ''} a ${end.getDate()} ${end.toLocaleDateString('pt-PT',{month:'short'})}`;
@@ -528,11 +761,11 @@ function vWeek(){
       <button class="nb" data-a="wk" data-d="1" aria-label="Semana seguinte">›</button></div></div>
   <div class="kline"><span><b>${Math.round(tot).toLocaleString('pt-PT')}</b>carga</span><span><b>${hm(mins)}</b>total</span>
     ${prev ? `<span><b>${tot >= prev ? '+' : '−'}${Math.abs(Math.round((tot/prev-1)*100))}%</b>vs anterior</span>` : ''}
-    ${bySport.map(([s,m]) => `<span><span class="dot" style="background:var(--${s})"></span>${SPORT[s]} ${hm(m)}</span>`).join('')}</div>
+    ${bySport.map(([s,m]) => `<span><span class="dot" style="background:${col(s)}"></span>${spName(s)} ${hm(m)}</span>`).join('')}</div>
 
   <div class="agenda">${days.map(({key,items},i) => `<div class="arow ${cls(key)}" data-day="${key}">
       <div class="ad"><span>${lbl[i]}</span><b>${pkey(key).getDate()}</b></div>
-      <div class="ai">${items.map(p => `<button class="aitem ${p.done ? 'done' : ''}" style="--c:var(--${p.sport})" data-drag="plan" data-id="${p.id}" data-a="pickPlan">
+      <div class="ai">${items.map(p => `<button class="aitem ${p.done ? 'done' : ''}" style="--c:${col(p.sport)}" data-drag="plan" data-id="${p.id}" data-a="pickPlan">
           <b>${esc(pName(p))}${p.done ? ' ✓' : ''}</b><span>${intOf(p.sport,p.int)[1]}, ${p.min} min</span></button>`).join('')
         || `<button class="arest" data-a="newPlan" data-key="${key}">Descanso</button>`}</div>
       <button class="icon add" data-a="newPlan" data-key="${key}" aria-label="Adicionar treino a ${dayName(key)}">+</button></div>`).join('')}</div>
@@ -558,19 +791,20 @@ function vToday(){
   let h = `<h1>Hoje</h1><p class="sub">${dateTxt}</p>`;
   if(!items.length) h += `<div class="card"><div class="t">Nada planeado para hoje</div><p class="m">Planeia no separador Semana ou começa já um treino de ginásio.</p></div>`;
   h += items.map(p => {
-    if(p.sport === 'gym'){ const t = tpl(p.tpl);
-      return `<div class="card tcard ${p.done ? 'isdone' : ''}" style="--c:var(--gym)">
-        <div class="tk">Ginásio</div><div class="tbig">${t ? esc(t.name) : 'Ginásio'}</div>
-        <div class="tmeta">${intOf('gym',p.int)[1]}, ${p.min} min</div>
+    if(isGym(p)){ const t = tpl(p.tpl);
+      return `<div class="card tcard ${p.done ? 'isdone' : ''}" style="--c:${col(p.sport)}">
+        <div class="tk">${esc(spName(p.sport))}</div><div class="tbig">${esc(p.title || (t ? t.name : spName(p.sport)))}</div>
+        <div class="tmeta">${esc(intOf(p.sport,p.int)[1])}, ${p.min} min</div>
         ${p.note ? `<p class="tnote">${esc(p.note)}</p>` : ''}
         ${t ? `<div class="tlist">${t.items.map(x => { const e = ex(x.exId), s = suggest(x);
           return `<div class="dl"><span>${esc(e.name)}</span><span class="m">${x.sets}×${x.min}–${x.max}${s.kg ? `, ${fmt1(num(s.kg))} kg` : ''}</span></div>`; }).join('')}</div>` : ''}
         ${p.done ? '<p class="tdone">Feito ✓</p>' : t ? `<button class="btn primary full big" data-a="startPlanId" data-id="${p.id}">Começar treino</button>`
           : `<button class="btn full big" data-a="togglePlan" data-id="${p.id}">Marcar feito</button>`}</div>`; }
-    return `<div class="card tcard ${p.done ? 'isdone' : ''}" style="--c:var(--${p.sport})">
-      <div class="tk">${SPORT[p.sport]}</div><div class="tbig">${intOf(p.sport,p.int)[1]}</div>
+    return `<div class="card tcard ${p.done ? 'isdone' : ''}" style="--c:${col(p.sport)}">
+      <div class="tk">${esc(spName(p.sport))}${p.title ? ', ' + esc(intOf(p.sport,p.int)[1]) : ''}</div><div class="tbig">${esc(p.title || intOf(p.sport,p.int)[1])}</div>
       <div class="tdur">${p.min}<span> min</span></div>
-      <p class="tguide">${GUIDE[p.int] || ''}</p>
+      <p class="tguide">${esc(intOf(p.sport,p.int)[3])}</p>
+      ${p.steps && p.steps.length ? stepsToday(p) : ''}
       ${p.note ? `<p class="tnote">${esc(p.note)}</p>` : ''}
       <button class="btn ${p.done ? '' : 'primary'} full big" data-a="togglePlan" data-id="${p.id}">${p.done ? 'Feito ✓' : 'Marcar feito'}</button></div>`;
   }).join('');
@@ -607,7 +841,7 @@ function vLogger(){
         ${en.sets.length > 1 ? `<button class="link muted" data-a="rmSet" data-i="${i}">Remover série</button>` : ''}</div>
     </div>`; }).join('') +
   `<div class="card">
-    <select data-c="addEntry" aria-label="Adicionar exercício"><option value="">Adicionar exercício…</option>${S.exercises.map(e => `<option value="${e.id}">${esc(e.name)}</option>`).join('')}</select>
+    <div class="addex"><input list="exlist" placeholder="Nome do exercício" data-c="exq" autocomplete="off" aria-label="Nome do exercício"><button class="btn primary" data-a="addExTo" data-ctx="log">Adicionar</button></div>
     <textarea data-c="note" placeholder="Notas: sensações, dores, energia, sono">${esc(a.notes || '')}</textarea>
   </div>
   <div class="actions"><button class="btn danger" data-a="cancel">Descartar</button><button class="btn primary" data-a="finish">Terminar treino</button></div>`;
@@ -674,48 +908,108 @@ function vProgress(){
 }
 
 function vPlan(){
-  const exOpts = S.exercises.map(e => `<option value="${e.id}">${esc(e.name)}</option>`).join('');
+  const seg = ui.seg || 'gym';
+  const segs = [['gym','Ginásio'],['cal','Calendário'],['rules','Regras'],['data','Dados']];
+  const top = `<h1>Ajustes</h1><p class="sub">Muda tudo à tua medida: treinos, modalidades, intensidades e regras.</p>
+    <div class="seg pseg" role="tablist">${segs.map(([k,n]) => `<button data-a="seg" data-id="${k}" aria-pressed="${seg === k}">${n}</button>`).join('')}</div>`;
+  return top + ({gym:pGym, cal:pCal, rules:pRules, data:pData}[seg])();
+}
+
+function pGym(){
   const field = (t,k,f,v,l) => `<input inputmode="numeric" value="${v}" data-c="item" data-id="${t}" data-k="${k}" data-f="${f}" aria-label="${l}">`;
   const groups = [...new Set(S.exercises.map(e => e.group || 'Outros'))];
   const uLbl = {kg:'carga', bw:'peso corporal', time:'tempo'};
-  return `<h1>Plano</h1><p class="sub">Os teus treinos, séries, intervalos de repetições e descanso.</p>` +
+  return `<h2>Treinos de ginásio</h2>` +
   S.templates.map(t => { const open = ui.tpl === t.id;
     return `<div class="card"><button class="rowbtn" data-a="openT" data-id="${t.id}" aria-expanded="${open}">
-      <div><div class="t">${esc(t.name)}</div><div class="m">${t.items.map(x => esc(ex(x.exId).name)).join(', ')}</div></div>
+      <div><div class="t">${esc(t.name)}</div><div class="m">${t.items.map(x => esc(ex(x.exId).name)).join(', ') || 'Sem exercícios'}</div></div>
       <span class="chev ${open ? 'up' : ''}">›</span></button>
       ${open ? `<div class="detail">
-        <input class="tname" value="${esc(t.name)}" data-c="tname" data-id="${t.id}" aria-label="Nome do treino">
-        <label class="m">Impacto nas pernas, para os alertas da Semana<select data-c="tlegs" data-id="${t.id}" style="margin-top:4px">${INT.gym.map(([k,n]) => `<option value="${k}" ${t.legs === k ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+        <label class="fl">Nome<input value="${esc(t.name)}" data-c="tname" data-id="${t.id}"></label>
+        <label class="fl">Intensidade no calendário<select data-c="tlegs" data-id="${t.id}">${INTS('gym').map(([k,n]) => `<option value="${k}" ${t.legs === k ? 'selected' : ''}>${esc(n)}</option>`).join('')}</select></label>
         ${t.items.map((x,k) => `<div class="item"><div class="ihead"><span class="iname">${esc(ex(x.exId).name)}</span>
           <button class="icon" data-a="mv" data-id="${t.id}" data-k="${k}" data-d="-1" aria-label="Mover para cima">↑</button>
           <button class="icon" data-a="mv" data-id="${t.id}" data-k="${k}" data-d="1" aria-label="Mover para baixo">↓</button>
           <button class="icon" data-a="rmItem" data-id="${t.id}" data-k="${k}" aria-label="Remover">×</button></div>
           <div class="isent">${field(t.id,k,'sets',x.sets,'Séries')}<span>séries de</span>${field(t.id,k,'min',x.min,'Mínimo')}<span>a</span>${field(t.id,k,'max',x.max,'Máximo')}<span>${ex(x.exId).unit === 'time' ? 'seg' : 'reps'}, descanso</span>${field(t.id,k,'rest',x.rest,'Descanso em segundos')}<span>s</span></div></div>`).join('')}
-        <select data-c="addItem" data-id="${t.id}" aria-label="Adicionar exercício"><option value="">Adicionar exercício…</option>${exOpts}</select>
+        <div class="addex"><input list="exlist" placeholder="Nome do exercício" data-c="exq" autocomplete="off" aria-label="Nome do exercício"><button class="btn primary" data-a="addExTo" data-ctx="tpl" data-id="${t.id}">Adicionar</button></div>
         <button class="link danger" data-a="delT" data-id="${t.id}">Apagar treino</button></div>` : ''}
     </div>`; }).join('') +
-  `<button class="btn full" data-a="newT">Novo treino</button>
-  <h2>Blocos do calendário</h2>
-  <div class="card">${S.blocks.map(b => `<div class="dl"><span><span class="dot" style="background:var(--${b.sport})"></span>${esc(pName(b))}, ${intOf(b.sport,b.int)[1].toLowerCase()}, ${b.min} min</span>
-    <button class="icon" data-a="rmBlock" data-id="${b.id}" aria-label="Apagar bloco">×</button></div>`).join('')}
-    <p class="m">Para criar um bloco, ao adicionar um treino na Semana marca Guardar também como bloco rápido.</p></div>
+  `<div class="addex"><input id="newTName" placeholder="Novo treino, por exemplo Treino C"><button class="btn primary" data-a="newT">Criar</button></div>
   <h2>Exercícios</h2>
   <div class="card lib">${groups.map(g => `<div class="m" style="margin-top:8px">${esc(g)}</div>` +
-    S.exercises.filter(e => (e.group || 'Outros') === g).map(e => `<div class="dl"><span>${esc(e.name)} <span class="m">${uLbl[e.unit]}</span></span>
+    S.exercises.filter(e => (e.group || 'Outros') === g).map(e => `<div class="dl exrow">
+      <input class="exname" value="${esc(e.name)}" data-c="exName" data-id="${e.id}" aria-label="Nome">
+      <select class="unitsel" data-c="exUnit" data-id="${e.id}" aria-label="Tipo de registo">${Object.entries(uLbl).map(([k,v]) => `<option value="${k}" ${e.unit === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
+      ${e.unit === 'kg' ? `<label class="incl">+<input inputmode="decimal" value="${e.inc ?? ''}" placeholder="${fmt1(num(S.cfg.prog.inc))}" data-c="exInc" data-id="${e.id}" aria-label="Aumento de carga em kg">kg</label>` : '<span class="incl"></span>'}
       <button class="icon" data-a="rmEx" data-id="${e.id}" aria-label="Apagar ${esc(e.name)}">×</button></div>`).join('')).join('')}
+    <p class="m">Muda o nome tocando nele. O +kg é quanto a carga sobe quando a app sugere progressão.</p>
     <div class="newex"><input id="nxName" placeholder="Nome do exercício"><input id="nxGroup" placeholder="Grupo, por exemplo Pernas">
       <select id="nxUnit"><option value="kg">Com carga (kg)</option><option value="bw">Peso corporal</option><option value="time">Por tempo (s)</option></select>
-      <button class="btn primary" data-a="addEx">Adicionar exercício</button></div></div>
-  <h2>Dados</h2>
+      <button class="btn primary" data-a="addEx">Adicionar exercício</button></div></div>`;
+}
+
+function pCal(){
+  return `<h2>Modalidades e intensidades</h2>` + S.cfg.sports.map(s => { const open = ui.spOpen === s.id, ints = S.cfg.ints[s.id] || [];
+    return `<div class="card"><button class="rowbtn" data-a="openSp" data-id="${s.id}" aria-expanded="${open}">
+      <div class="sprow"><span class="dot big" style="background:${s.color}"></span><div><div class="t">${esc(s.name)}</div>
+      <div class="m">${ints.map(i => esc(i.name)).join(', ')}</div></div></div><span class="chev ${open ? 'up' : ''}">›</span></button>
+      ${open ? `<div class="detail">
+        <div class="frm"><label class="fl">Nome<input value="${esc(s.name)}" data-c="spf" data-id="${s.id}" data-f="name"></label>
+          <label class="fl sm">Abrev.<input value="${esc(s.short || '')}" maxlength="5" data-c="spf" data-id="${s.id}" data-f="short"></label>
+          <label class="fl sm">Cor<input type="color" value="${s.color}" data-c="spf" data-id="${s.id}" data-f="color"></label></div>
+        ${ints.map(i => `<div class="item">
+          <div class="ihead"><input class="iname-in" value="${esc(i.name)}" data-c="intf" data-s="${s.id}" data-k="${i.id}" data-f="name" aria-label="Nome da intensidade">
+            ${ints.length > 1 ? `<button class="icon" data-a="rmInt" data-s="${s.id}" data-k="${i.id}" aria-label="Apagar intensidade">×</button>` : ''}</div>
+          <div class="isent"><span>RPE</span><input inputmode="decimal" value="${i.rpe}" data-c="intf" data-s="${s.id}" data-k="${i.id}" data-f="rpe" aria-label="RPE">
+            <span>abrev.</span><input class="w-md" maxlength="6" value="${esc(i.short || '')}" data-c="intf" data-s="${s.id}" data-k="${i.id}" data-f="short" aria-label="Abreviatura"></div>
+          <input class="hint-in" value="${esc(i.hint || '')}" placeholder="Descrição, por exemplo RPE 3–4, conversável" data-c="intf" data-s="${s.id}" data-k="${i.id}" data-f="hint">
+          <div class="toggles"><label><input type="checkbox" data-c="intb" data-s="${s.id}" data-k="${i.id}" data-f="hard" ${i.hard ? 'checked' : ''}> Conta como dia duro</label>
+            <label><input type="checkbox" data-c="intb" data-s="${s.id}" data-k="${i.id}" data-f="legs" ${i.legs ? 'checked' : ''}> Carrega as pernas</label></div></div>`).join('')}
+        <div class="row"><button class="link" data-a="addInt" data-s="${s.id}">Adicionar intensidade</button>
+          ${s.kind !== 'gym' ? `<button class="link danger" data-a="rmSp" data-id="${s.id}">Apagar modalidade</button>` : ''}</div>
+      </div>` : ''}</div>`; }).join('') +
+  `<div class="addex"><input id="newSpName" placeholder="Nova modalidade, por exemplo Ténis"><button class="btn primary" data-a="addSp">Adicionar</button></div>
+  <p class="m">A carga de cada treino é minutos × RPE. "Carrega as pernas" e "dia duro" alimentam os alertas da Semana.</p>
+  <h2>Blocos rápidos</h2>
+  <div class="card">${S.blocks.map(b => `<button class="dl rowbtn" data-a="editBlock" data-id="${b.id}"><span><span class="dot" style="background:${col(b.sport)}"></span>${esc(pName(b))}, ${esc(intOf(b.sport,b.int)[1].toLowerCase())}, ${b.min} min</span><span class="chev">›</span></button>`).join('')}
+    <button class="link" data-a="newBlock">Novo bloco</button></div>
+  <h2>Durações rápidas</h2>
+  <div class="card"><input value="${S.cfg.durations.join(', ')}" data-c="durs" aria-label="Durações em minutos"><p class="m">Os atalhos de minutos ao criar um treino, separados por vírgulas.</p></div>`;
+}
+
+function pRules(){
+  const R = S.cfg.rules;
+  const tg = (k,l) => `<label class="trow"><span>${l}</span><input type="checkbox" class="sw" data-c="cfg" data-p="rules.${k}" data-t="bool" ${R[k] ? 'checked' : ''}></label>`;
+  return `<h2>Alertas da Semana</h2><div class="card">
+    ${tg('sameDay','Pernas no ginásio e treino que carrega as pernas no mesmo dia')}
+    ${tg('eve','Pernas no ginásio na véspera de treino que carrega as pernas')}
+    ${tg('after','Ginásio de pernas duro no dia a seguir a treino que carrega as pernas')}
+    ${tg('consecutive','Dois dias duros seguidos')}
+    ${tg('noRest','Semana sem dia de descanso')}
+    <label class="trow"><span>Máximo de dias duros por semana <span class="m">(0 desliga)</span></span><input class="num" inputmode="numeric" value="${R.maxHard}" data-c="cfg" data-p="rules.maxHard" data-t="num"></label>
+    <label class="trow"><span>Subida máxima de carga semanal, em % <span class="m">(0 desliga)</span></span><input class="num" inputmode="numeric" value="${R.ramp}" data-c="cfg" data-p="rules.ramp" data-t="num"></label>
+  </div>
+  <h2>Progressão no ginásio</h2><div class="card">
+    <label class="trow"><span>Sugerir subir a carga quando todas as séries chegam ao topo das reps com RPE até</span>
+      <select class="num" data-c="cfg" data-p="prog.rpe" data-t="num">${[7,7.5,8,8.5,9,9.5,10].map(r => `<option value="${r}" ${num(S.cfg.prog.rpe) === r ? 'selected' : ''}>${String(r).replace('.',',')}</option>`).join('')}</select></label>
+    <label class="trow"><span>Aumento de carga por defeito, em kg</span><input class="num" inputmode="decimal" value="${S.cfg.prog.inc}" data-c="cfg" data-p="prog.inc" data-t="num"></label>
+    <p class="m">Podes pôr um aumento diferente em cada exercício, em Ginásio → Exercícios.</p></div>`;
+}
+
+function pData(){
+  return `<h2>Dados</h2>
   <div class="card"><p class="m" style="margin-top:0">Os dados ficam guardados só neste dispositivo. Exporta uma cópia de vez em quando.</p>
     <div class="row"><button class="btn" data-a="export">Exportar cópia</button>
-      <label class="btn">Importar cópia<input type="file" accept=".json,application/json" data-c="import" hidden></label>
-      <button class="btn danger" data-a="reset">Repor tudo</button></div></div>`;
+      <label class="btn">Importar cópia<input type="file" accept=".json,application/json" data-c="import" hidden></label></div></div>
+  <div class="card"><div class="row"><button class="btn" data-a="resetCfg">Repor modalidades e regras</button><button class="btn danger" data-a="reset">Repor tudo</button></div>
+    <p class="m">Repor modalidades e regras mantém treinos, histórico e exercícios.</p></div>`;
 }
 
 function render(){
   const v = {today:vToday, week:vWeek, history:vHistory, progress:vProgress, plan:vPlan}[tab];
   $('#app').className = tab === 'week' ? 'wide' : '';
+  $('#exlist').innerHTML = S.exercises.map(e => `<option value="${esc(e.name)}">`).join('');
   $('#app').innerHTML = v();
   const sb = $('.sh-body'), keep = sb ? sb.scrollTop : 0;
   $('#sheet').innerHTML = vSheet();
@@ -752,13 +1046,55 @@ const tpl = id => S.templates.find(t => t.id === id);
 function startTpl(id, planId){ const t = tpl(id); if(!t) return;
   S.active = {id:uid(), date:new Date().toISOString(), templateId:t.id, planId:planId || null, name:t.name, notes:'', entries:t.items.map(buildEntry)};
   tab = 'today'; save(); render(); scrollTo(0,0); }
-function addFromBlock(b, day){ S.plan.push({id:uid(), date:day, sport:b.sport, int:b.int, min:b.min, tpl:b.tpl || '', note:b.note || '', done:false}); }
-function saveDraft(){ const d = ui.draft; d.min = Math.max(0, parseInt(d.min) || 0);
+function addFromBlock(b, day){ S.plan.push({id:uid(), date:day, sport:b.sport, int:b.int, min:b.min, tpl:b.tpl || '', title:b.title || '', note:b.note || '', steps:clone(b.steps || []), done:false}); }
+function saveDraft(){ const d = ui.draft; if(!isGym(d) && d.steps && d.steps.length) d.min = Math.max(1, Math.round(wTotals(d).sec/60)); d.min = Math.max(0, parseInt(d.min) || 0);
   if(!d.min){ toast('Indica a duração em minutos'); return false; }
-  const rec = {id:d.id || uid(), date:d.date, sport:d.sport, int:d.int, min:d.min, tpl:d.sport === 'gym' ? d.tpl : '', note:d.note || '', done:!!d.done};
+  const rec = {id:d.id || uid(), date:d.date, sport:d.sport, int:d.int, min:d.min, tpl:isGym(d) ? d.tpl : '', title:(d.title || '').trim(), note:d.note || '', steps:isGym(d) ? [] : (d.steps || []), done:!!d.done};
   const k = S.plan.findIndex(p => p.id === rec.id); if(k >= 0) S.plan[k] = rec; else S.plan.push(rec);
   save(); return rec; }
+// Encontra o exercício pelo nome ou cria-o na hora
+function exByName(name){
+  const n = name.trim(); if(!n) return null;
+  let e = S.exercises.find(x => x.name.toLowerCase() === n.toLowerCase());
+  if(!e){ e = {id:uid(), name:n, group:'Outros', unit:'kg'}; S.exercises.push(e); e.isNew = true; }
+  return e;
+}
+function setPath(o, path, v){ const ks = path.split('.'); ks.slice(0,-1).forEach(k => o = o[k]); o[ks[ks.length-1]] = v; }
 const A = {
+  stPreset: d => { ui.draft.steps = PRESETS[d.k][1](); ui.stepOpen = null; render(); },
+  stAdd: d => { const dr = ui.draft; dr.steps ||= [];
+    const s = d.t === 'repeat' ? rep(4, [mk('work'), mk('rec')]) : mk(d.t);
+    if(d.in) stp(d.in).steps.push(s);
+    else { const last = dr.steps[dr.steps.length-1];
+      if(last && last.type === 'cool' && d.t !== 'cool') dr.steps.splice(dr.steps.length-1, 0, s); else dr.steps.push(s); }
+    ui.stepOpen = s.type === 'repeat' ? null : s.id; render(); },
+  stOpen: d => { ui.stepOpen = ui.stepOpen === d.id ? null : d.id; render(); },
+  stMv: d => { const r = findStep(ui.draft.steps, d.id), j = r.i + (+d.d); if(j < 0 || j >= r.arr.length) return;
+    [r.arr[r.i], r.arr[j]] = [r.arr[j], r.arr[r.i]]; render(); },
+  stDel: d => { const r = findStep(ui.draft.steps, d.id); r.arr.splice(r.i, 1); render(); },
+  stType: d => { stp(d.id).type = d.k; render(); },
+  stDurK: d => { const s = stp(d.id), sw = ui.draft.sport === 'swim'; s.dur.kind = d.k;
+    if(d.k === 'dist'){ s.dur.raw = sw ? '400' : '1'; s.dur.unit = sw ? 'm' : 'km'; } if(d.k === 'time') s.dur.raw = '5'; render(); },
+  stTgK: d => { stp(d.id).tg = {kind:d.k, lo:d.k === 'zone' ? '2' : '', hi:''}; render(); },
+  stClear: () => { if(!confirm('Limpar a estrutura deste treino?')) return; ui.draft.steps = []; render(); },
+  seg: d => { ui.seg = d.id; render(); },
+  openSp: d => { ui.spOpen = ui.spOpen === d.id ? null : d.id; render(); },
+  addSp: () => { const n = $('#newSpName').value.trim(); if(!n){ toast('Escreve o nome da modalidade'); $('#newSpName').focus(); return; }
+    const id = uid(); S.cfg.sports.push({id, name:n, short:n.slice(0,4), color:SP_COLORS[S.cfg.sports.length % SP_COLORS.length], kind:'end'});
+    S.cfg.ints[id] = [E(uid(),'Fácil','Fácil',3,'',false,false), E(uid(),'Moderado','Mod',5,'',false,false), E(uid(),'Intenso','Intenso',8,'',false,true)];
+    ui.spOpen = id; save(); render(); toast(`${n} adicionada`); },
+  rmSp: d => { if(!confirm(`Apagar ${spName(d.id)}? Os blocos desta modalidade também saem.`)) return;
+    S.cfg.sports = S.cfg.sports.filter(s => s.id !== d.id); delete S.cfg.ints[d.id]; S.blocks = S.blocks.filter(b => b.sport !== d.id); save(); render(); },
+  addInt: d => { S.cfg.ints[d.s].push(E(uid(),'Nova intensidade','Nova',5,'',false,false)); save(); render(); },
+  rmInt: d => { S.cfg.ints[d.s] = S.cfg.ints[d.s].filter(i => i.id !== d.k); save(); render(); },
+  newBlock: () => { const s = sportIds()[1] || sportIds()[0]; ui.draft = {mode:'block', sport:s, int:(INTS(s)[0] || [''])[0], min:45, tpl:'', note:''}; render(); },
+  editBlock: d => { ui.draft = {...clone(S.blocks.find(b => b.id === d.id)), mode:'block'}; ui.stepOpen = null; render(); },
+  resetCfg: () => { if(!confirm('Repor modalidades, intensidades, durações e regras de origem?')) return; S.cfg = clone(DEFAULT_CFG); save(); render(); toast('Reposto'); },
+  addExTo: (d, b) => { const e = exByName(b.previousElementSibling.value);
+    if(!e){ toast('Escreve o nome do exercício'); b.previousElementSibling.focus(); return; }
+    if(d.ctx === 'tpl') tpl(d.id).items.push({exId:e.id, sets:3, min:8, max:12, rest:90});
+    else S.active.entries.push(buildEntry({exId:e.id, sets:3, min:8, max:12, rest:90}));
+    const fresh = e.isNew; delete e.isNew; save(); render(); toast(fresh ? `${e.name} criado e adicionado` : `${e.name} adicionado`); },
   wk: d => { ui.week = addDays(ui.week, 7 * +d.d); ui.draft = null; render(); },
   wkToday: () => { ui.week = weekStartKey(new Date()); ui.draft = null; render(); },
   newPlan: d => { ui.sel = d.key; ui.draft = {date:d.key, sport:'run', int:'z2', min:45, tpl:'', note:''}; render(); },
@@ -768,9 +1104,9 @@ const A = {
   dMinSet: d => { ui.draft.min = +d.m; render(); },
   quickAdd: d => { const b = S.blocks.find(x => x.id === d.id), day = ui.draft.date; addFromBlock(b, day);
     ui.draft = null; save(); render(); toast(`${pName(b)} marcado para ${dayName(day)}`); },
-  editPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = {...p}; render(); },
+  editPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = clone(p); ui.stepOpen = null; render(); },
   selDay: d => { ui.sel = d.key; ui.draft = null; render(); },
-  pickPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = {...p}; render(); },
+  pickPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = clone(p); ui.stepOpen = null; render(); },
   addBlock: d => { const b = S.blocks.find(x => x.id === d.id); addFromBlock(b, ui.sel); save(); render(); toast(`Juntado a ${dayName(ui.sel)}`); },
   saveBlock: () => { const d = ui.draft, min = parseInt(d.min) || 0; if(!min){ toast('Indica a duração em minutos'); return; }
     S.blocks.push({id:uid(), sport:d.sport, int:d.int, min, tpl:d.sport === 'gym' ? d.tpl : '', note:d.note || ''}); save(); render(); toast('Bloco guardado'); },
@@ -779,14 +1115,20 @@ const A = {
   togglePlan: d => { const p = S.plan.find(x => x.id === d.id); p.done = !p.done; save(); render(); },
   closePlan: () => { ui.draft = null; render(); },
   dSport: d => { const dr = ui.draft; dr.sport = d.s;
-    if(d.s === 'gym'){ const t = S.templates[0]; dr.tpl = dr.tpl || (t ? t.id : ''); dr.int = (tpl(dr.tpl) || {}).legs || 'heavy'; }
-    else if(!INT[d.s].some(x => x[0] === dr.int)) dr.int = 'z2';
+    if(sp(d.s).kind === 'gym'){ const t = S.templates[0]; dr.tpl = dr.tpl || (t ? t.id : ''); dr.int = (tpl(dr.tpl) || {}).legs || (INTS(d.s)[0] || [''])[0]; }
+    else if(!INTS(d.s).some(x => x[0] === dr.int)) dr.int = (INTS(d.s).find(x => x[0] === 'z2') || INTS(d.s)[0] || [''])[0];
     render(); },
-  savePlan: () => { const dr = ui.draft, r = saveDraft(); if(!r) return;
-    if(dr.asBlock) S.blocks.push({id:uid(), sport:r.sport, int:r.int, min:r.min, tpl:r.tpl, note:r.note});
+  savePlan: () => { const dr = ui.draft;
+    if(dr.mode === 'block'){ const hasSt = !isGym(dr) && dr.steps && dr.steps.length;
+      const min = hasSt ? Math.max(1, Math.round(wTotals(dr).sec/60)) : parseInt(dr.min) || 0; if(!min){ toast('Indica a duração em minutos'); return; }
+      const b = {id:dr.id || uid(), sport:dr.sport, int:dr.int, min, tpl:isGym(dr) ? dr.tpl : '', title:(dr.title || '').trim(), note:dr.note || '', steps:hasSt ? dr.steps : []};
+      const k = S.blocks.findIndex(x => x.id === b.id); if(k >= 0) S.blocks[k] = b; else S.blocks.push(b);
+      ui.draft = null; save(); render(); toast('Bloco guardado'); return; }
+    const r = saveDraft(); if(!r) return;
+    if(dr.asBlock) S.blocks.push({id:uid(), sport:r.sport, int:r.int, min:r.min, tpl:r.tpl, title:r.title, note:r.note, steps:clone(r.steps)});
     const isNew = !dr.id; ui.draft = null; save(); render(); toast(isNew ? `Adicionado a ${dayName(r.date)}` : 'Alterações guardadas'); },
   donePlan: () => { ui.draft.done = !ui.draft.done; if(saveDraft()){ ui.draft = null; render(); } },
-  delPlan: () => { S.plan = S.plan.filter(p => p.id !== ui.draft.id); ui.draft = null; save(); render(); },
+  delPlan: () => { if(ui.draft.mode === 'block') S.blocks = S.blocks.filter(b => b.id !== ui.draft.id); else S.plan = S.plan.filter(p => p.id !== ui.draft.id); ui.draft = null; save(); render(); },
   startPlan: () => { const r = saveDraft(); if(!r) return; ui.draft = null; startTpl(r.tpl, r.id); },
   copyWeek: () => { const prev = S.plan.filter(p => inWeek(p.date, addDays(ui.week,-7)));
     if(!prev.length){ toast('A semana anterior está vazia'); return; }
@@ -813,7 +1155,7 @@ const A = {
   openS: d => { ui.open = ui.open === d.id ? null : d.id; render(); },
   delS: d => { if(!confirm('Apagar este treino do histórico?')) return; S.sessions = S.sessions.filter(s => s.id !== d.id); save(); render(); },
   openT: d => { ui.tpl = ui.tpl === d.id ? null : d.id; render(); },
-  newT: () => { const n = prompt('Nome do novo treino', 'Treino C'); if(!n) return; const t = {id:uid(), name:n.trim(), items:[]};
+  newT: () => { const n = $('#newTName').value.trim(); if(!n){ toast('Escreve o nome do treino'); $('#newTName').focus(); return; } const t = {id:uid(), name:n, legs:'mod', items:[]};
     S.templates.push(t); ui.tpl = t.id; save(); render(); },
   delT: d => { if(!confirm(`Apagar o treino "${tpl(d.id).name}"? O histórico mantém-se.`)) return; S.templates = S.templates.filter(t => t.id !== d.id); save(); render(); },
   mv: d => { const items = tpl(d.id).items, k = +d.k, j = k + (+d.d); if(j < 0 || j >= items.length) return;
@@ -832,9 +1174,23 @@ const A = {
   tskip: () => stopTimer(),
 };
 const C = {
+  stDur: t => { stp(t.dataset.id).dur.raw = t.value; },
+  stUnit: t => { stp(t.dataset.id).dur.unit = t.value; liveRefresh(); },
+  stTg: t => { stp(t.dataset.id).tg[t.dataset.f] = t.value; liveRefresh(); },
+  stNote: t => { stp(t.dataset.id).note = t.value; },
+  repT: t => { stp(t.dataset.id).times = Math.max(1, parseInt(t.value) || 1); },
   dInt: t => { ui.draft.int = t.value; render(); },
   dMin: t => { ui.draft.min = t.value; },
   dBlock: t => { ui.draft.asBlock = t.checked; },
+  dTitle: t => { ui.draft.title = t.value; },
+  exName: t => { if(t.value.trim()){ ex(t.dataset.id).name = t.value.trim(); save(); } },
+  exInc: t => { const v = num(t.value); ex(t.dataset.id).inc = v || undefined; save(); },
+  spf: t => { sp(t.dataset.id)[t.dataset.f] = t.value; save(); if(t.type === 'color') render(); },
+  intf: t => { intO(t.dataset.s, t.dataset.k)[t.dataset.f] = t.dataset.f === 'rpe' ? num(t.value) : t.value; save(); },
+  intb: t => { intO(t.dataset.s, t.dataset.k)[t.dataset.f] = t.checked; save(); },
+  cfg: t => { setPath(S.cfg, t.dataset.p, t.dataset.t === 'bool' ? t.checked : num(t.value)); save(); },
+  durs: t => { const l = t.value.split(/[,; ]+/).map(x => parseInt(x)).filter(x => x > 0); if(l.length){ S.cfg.durations = [...new Set(l)].sort((a,b) => a-b); save(); } },
+  exUnit: t => { ex(t.dataset.id).unit = t.value; save(); render(); },
   dNote: t => { ui.draft.note = t.value; },
   dTpl: t => { ui.draft.tpl = t.value; const x = tpl(t.value); if(x) ui.draft.int = x.legs; render(); },
   tlegs: t => { tpl(t.dataset.id).legs = t.value; save(); },
@@ -858,8 +1214,8 @@ const C = {
     r.readAsText(f); },
 };
 document.addEventListener('click', ev => { const b = ev.target.closest('[data-a]'); if(b) A[b.dataset.a]?.(b.dataset, b); });
-document.addEventListener('input', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'TEXTAREA' || (t.tagName === 'INPUT' && t.type !== 'file' && t.type !== 'checkbox'))) C[t.dataset.c]?.(t); });
-document.addEventListener('change', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'SELECT' || t.type === 'file' || t.type === 'checkbox')) C[t.dataset.c]?.(t); });
+document.addEventListener('input', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'TEXTAREA' || (t.tagName === 'INPUT' && t.type !== 'file' && t.type !== 'checkbox' && t.type !== 'color'))) C[t.dataset.c]?.(t); if(t.dataset.rr) liveRefresh(); });
+document.addEventListener('change', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'SELECT' || t.type === 'file' || t.type === 'checkbox' || t.type === 'color')) C[t.dataset.c]?.(t); });
 
 /* ---------- Arrastar blocos e treinos ---------- */
 const drag = {pending:null, active:null, swallow:false};
@@ -921,7 +1277,7 @@ function endDrag(x, y){
   ui.sel = day; ui.draft = null; save(); render();
 }
 
-document.addEventListener('keydown', ev => { if(ev.key === 'Escape' && ui.draft){ ui.draft = null; render(); } });
+document.addEventListener('keydown', ev => { if(ev.key === 'Enter' && (ev.target.dataset.c === 'exq' || ['newTName','newSpName'].includes(ev.target.id))){ ev.preventDefault(); ev.target.nextElementSibling.click(); return; } if(ev.key === 'Escape' && ui.draft){ ui.draft = null; render(); } });
 
 render();
 if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(() => {});
