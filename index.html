@@ -140,7 +140,7 @@ main.wide{max-width:1100px}
 .chip .s{display:inline}.chip .f{display:none}
 .chip.done{opacity:.5}
 .chip.lifted{opacity:.25}
-.chip.ghost{position:fixed;left:0;top:0;z-index:20;pointer-events:none;opacity:.96;box-shadow:0 12px 32px rgba(0,0,0,.25);cursor:grabbing}
+.ghost{position:fixed;left:0;top:0;z-index:20;pointer-events:none;opacity:.96;box-shadow:0 12px 32px rgba(0,0,0,.25);cursor:grabbing}
 .palette-wrap{margin:18px 0 14px}
 .palette-wrap .m{margin:0 0 8px}
 .palette{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none}
@@ -203,6 +203,74 @@ body.dragging,body.dragging *{cursor:grabbing!important}
 .minf span{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px}
 .pwarn{font-size:13px;color:var(--danger);margin:0}
 .pwarn.low{color:var(--muted)}
+/* Semana no telemóvel: agenda vertical */
+.agenda{display:grid;gap:6px}
+.arow{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:16px;padding:10px 10px 10px 14px;min-height:64px}
+.arow.today{box-shadow:inset 0 0 0 2px var(--accent)}
+.arow.flag{box-shadow:inset 0 0 0 2px var(--danger)}
+.arow.over{background:color-mix(in srgb,var(--accent) 16%,var(--card))}
+.ad{width:34px;flex:none;text-align:center;font-size:12px;color:var(--muted)}
+.ad b{display:block;font-size:19px;color:var(--text);font-variant-numeric:tabular-nums}
+.arow.today .ad b{color:var(--accent)}
+.ai{flex:1;display:grid;gap:6px;min-width:0}
+.aitem{display:block;text-align:left;background:color-mix(in srgb,var(--c) 14%,var(--card));border-left:4px solid var(--c);border-radius:10px;padding:8px 10px;
+  user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.aitem b{display:block;font-weight:600;font-size:15px}
+.aitem span{font-size:13px;color:var(--muted)}
+.aitem.done{opacity:.5}
+.aitem.lifted{opacity:.25}
+.arest{color:var(--muted);font-size:15px;text-align:left;padding:8px 0}
+.cal,.palette-wrap{display:none}
+.tip{margin:14px 4px}
+@media (min-width:760px){.agenda,.tip{display:none}.cal{display:grid}.palette-wrap{display:block}}
+
+/* Folha de criação */
+body.sheet-open{overflow:hidden}
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:30;animation:fade .2s}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:31;background:var(--bg);border-radius:22px 22px 0 0;max-height:92vh;display:flex;flex-direction:column;animation:up .25s ease-out}
+@media (min-width:760px){.sheet{left:50%;right:auto;bottom:auto;top:50%;width:520px;transform:translate(-50%,-50%);border-radius:22px;max-height:88vh;animation:fade .2s}}
+#sheet.still .sheet,#sheet.still .sheet-bg{animation:none}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+@keyframes fade{from{opacity:0}}
+.sh-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px 10px}
+.sh-head .t{font-size:20px}
+.close{background:var(--field);font-size:22px}
+.sh-body{overflow-y:auto;padding:4px 20px 16px;-webkit-overflow-scrolling:touch}
+.sh-foot{padding:12px 20px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--bg)}
+.frow{display:flex;justify-content:center;gap:22px;margin-top:6px;flex-wrap:wrap}
+.lbl{font-size:13px;font-weight:600;color:var(--muted);margin:18px 0 8px}
+.lbl.sep{margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.qb{text-align:left;background:var(--card);border-left:4px solid var(--c);border-radius:12px;padding:10px 12px}
+.qb b{display:block;font-size:15px;font-weight:600}
+.qb span{font-size:13px;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tile{background:var(--card);border-radius:14px;padding:14px 4px;font-size:14px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:8px;border:2px solid transparent}
+.tile .dot{width:14px;height:14px;margin:0;background:var(--c)}
+.tile[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--card))}
+.opts{display:grid;gap:6px}
+.opt{text-align:left;background:var(--card);border-radius:12px;padding:12px 14px;border:2px solid transparent;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.opt b{font-weight:600;font-size:15px}
+.opt span{font-size:13px;color:var(--muted);text-align:right}
+.opt[aria-pressed="true"]{border-color:var(--accent)}
+.dur{display:flex;align-items:center;gap:10px}
+.stp{width:52px;height:52px;border-radius:50%;background:var(--card);font-size:26px;color:var(--accent);flex:none}
+.dv{flex:1;position:relative}
+.dv input{font-size:30px;font-weight:700;text-align:center;height:56px;background:var(--card);font-variant-numeric:tabular-nums;padding-right:44px}
+.dv span{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.pill{padding:7px 14px;border-radius:999px;background:var(--card);font-size:14px;font-variant-numeric:tabular-nums}
+.pill[aria-pressed="true"]{background:var(--accent);color:#fff}
+.sh-body textarea{margin-top:0;background:var(--card)}
+.crow{display:flex;align-items:center;gap:10px;font-size:15px;margin:16px 0 4px}
+.crow input{width:20px;height:20px;accent-color:var(--accent)}
+.pwarn{margin-top:12px}
+
+/* Plano: exercício em frase */
+.ihead{display:flex;align-items:center;gap:2px}
+.ihead .iname{flex:1;margin:0}
+.isent{display:flex;flex-wrap:wrap;align-items:center;gap:6px;color:var(--muted);font-size:15px;margin-top:6px}
+.isent input{width:54px;text-align:center;padding:8px 4px;font-variant-numeric:tabular-nums}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:380px){.sh,.set{grid-template-columns:18px 1fr 1fr 1fr 44px;gap:6px}.stats b{font-size:22px}}
 </style>
@@ -216,6 +284,7 @@ body.dragging,body.dragging *{cursor:grabbing!important}
   <button data-a="tplus" aria-label="Mais 15 segundos">+15</button>
   <button data-a="tskip">Saltar</button>
 </div>
+<div id="sheet"></div>
 <div id="toast" role="status"></div>
 <div id="trash">Largar aqui para apagar</div>
 <div id="dragwarn" role="alert"></div>
@@ -398,21 +467,44 @@ const pItem = p => `<button class="pitem ${p.done ? 'done' : ''}" data-a="editPl
   <span class="pn">${esc(pName(p))}${p.note ? `<span class="m">, ${esc(p.note.split('\n')[0])}</span>` : ''}</span>
   <span class="m">${intOf(p.sport,p.int)[1]}, ${p.min} min</span>${p.done ? '<span class="ck">✓</span>' : ''}</button>`;
 
-function planForm(start){
-  const dr = ui.draft;
+const GUIDE_S = {rec:'RPE 2, só soltar', z2:'RPE 3–4, conversável', tempo:'RPE 6–7, controlado', int:'RPE 8–9 nas séries', long:'RPE 4–5, constante',
+  heavy:'Agachamento e peso morto pesados', mod:'Unilateral, carga média', upper:'Sem carga nas pernas'};
+
+/* Folha para criar ou editar um treino do calendário */
+function vSheet(){
+  const dr = ui.draft; if(!dr) return '';
+  const isNew = !dr.id, gym = dr.sport === 'gym';
   const warn = newIssues(S.plan.filter(p => p.id !== dr.id), {...dr, min:num(dr.min)}).filter(x => x.keys.includes(dr.date) || !x.keys.length);
-  return `<div class="pform">
-    <div class="seg" role="group" aria-label="Modalidade">${Object.keys(SPORT).map(s => `<button data-a="dSport" data-s="${s}" aria-pressed="${dr.sport === s}">${SPORT[s]}</button>`).join('')}</div>
-    ${dr.sport === 'gym' ? `<select data-c="dTpl" aria-label="Treino de ginásio"><option value="">Sem treino associado</option>${S.templates.map(t => `<option value="${t.id}" ${dr.tpl === t.id ? 'selected' : ''}>${esc(t.name)}</option>`).join('')}</select>` : ''}
-    <div class="g2"><select data-c="dInt" aria-label="Intensidade">${INT[dr.sport].map(([k,n]) => `<option value="${k}" ${dr.int === k ? 'selected' : ''}>${n}</option>`).join('')}</select>
-      <label class="minf"><input inputmode="numeric" value="${esc(dr.min)}" data-c="dMin" aria-label="Duração em minutos"><span>min</span></label></div>
-    <textarea data-c="dNote" rows="3" placeholder="Estrutura, por exemplo&#10;15' aquecimento&#10;6×800 m a 4:30, 2' rec">${esc(dr.note || '')}</textarea>
-    ${warn.map(w => `<p class="pwarn ${w.lvl}">${esc(w.msg)}</p>`).join('')}
-    <div class="row"><button class="btn primary" data-a="savePlan">Guardar</button>
-      ${dr.id && dr.sport === 'gym' && dr.tpl && !dr.done ? `<button class="link" data-a="startPlan">Começar treino</button>` : ''}
-      ${dr.id ? `<button class="link" data-a="donePlan">${dr.done ? 'Marcar por fazer' : 'Marcar feito'}</button><button class="link danger" data-a="delPlan">Apagar</button>` : ''}
-      <button class="link" data-a="saveBlock">Guardar como bloco</button>
-      <button class="link muted" data-a="closePlan">Cancelar</button></div>
+  return `<div class="sheet-bg" data-a="closePlan"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="${isNew ? 'Novo treino' : 'Editar treino'}">
+    <div class="sh-head"><div><div class="t">${isNew ? 'Novo treino' : 'Editar treino'}</div><div class="m">${cap(dayName(dr.date))}, ${pkey(dr.date).getDate()}</div></div>
+      <button class="icon close" data-a="closePlan" aria-label="Fechar">×</button></div>
+    <div class="sh-body">
+      ${isNew && S.blocks.length ? `<div class="lbl">Rápido, um toque e fica marcado</div>
+        <div class="quick">${S.blocks.map(b => `<button class="qb" style="--c:var(--${b.sport})" data-a="quickAdd" data-id="${b.id}"><b>${esc(pName(b))}</b><span>${intOf(b.sport,b.int)[1]}, ${b.min} min</span></button>`).join('')}</div>
+        <div class="lbl sep">Ou cria à medida</div>` : ''}
+      <div class="tiles">${Object.keys(SPORT).map(s => `<button class="tile" style="--c:var(--${s})" data-a="dSport" data-s="${s}" aria-pressed="${dr.sport === s}"><span class="dot"></span>${SPORT[s]}</button>`).join('')}</div>
+      ${gym ? `<div class="lbl">Treino de ginásio</div><div class="opts">
+        ${S.templates.map(t => `<button class="opt" data-a="dTplB" data-id="${t.id}" aria-pressed="${dr.tpl === t.id}"><b>${esc(t.name)}</b><span>${t.items.length} exercícios</span></button>`).join('')}
+        <button class="opt" data-a="dTplB" data-id="" aria-pressed="${!dr.tpl}"><b>Sem treino associado</b></button></div>` : ''}
+      <div class="lbl">Intensidade</div>
+      <div class="opts">${INT[dr.sport].map(([k,n]) => `<button class="opt" data-a="dIntB" data-k="${k}" aria-pressed="${dr.int === k}"><b>${n}</b><span>${GUIDE_S[k]}</span></button>`).join('')}</div>
+      <div class="lbl">Duração</div>
+      <div class="dur"><button class="stp" data-a="dMinStep" data-d="-5" aria-label="Menos 5 minutos">−</button>
+        <label class="dv"><input inputmode="numeric" value="${esc(dr.min)}" data-c="dMin" aria-label="Minutos"><span>min</span></label>
+        <button class="stp" data-a="dMinStep" data-d="5" aria-label="Mais 5 minutos">+</button></div>
+      <div class="chips">${[30,45,60,75,90,120,180].map(m => `<button class="pill" data-a="dMinSet" data-m="${m}" aria-pressed="${num(dr.min) === m}">${m}</button>`).join('')}</div>
+      <div class="lbl">Estrutura <span class="m">(opcional)</span></div>
+      <textarea data-c="dNote" rows="3" placeholder="Por exemplo&#10;15' aquecimento&#10;6×800 m a 4:30, 2' rec">${esc(dr.note || '')}</textarea>
+      <label class="crow"><input type="checkbox" data-c="dBlock" ${dr.asBlock ? 'checked' : ''}> Guardar também como bloco rápido</label>
+      ${warn.map(w => `<p class="pwarn ${w.lvl}">${esc(w.msg)}</p>`).join('')}
+    </div>
+    <div class="sh-foot">
+      <button class="btn primary full big" data-a="savePlan">${isNew ? `Adicionar a ${dayName(dr.date)}` : 'Guardar alterações'}</button>
+      ${!isNew ? `<div class="frow">${gym && dr.tpl && !dr.done ? '<button class="link" data-a="startPlan">Começar treino</button>' : ''}
+        <button class="link" data-a="donePlan">${dr.done ? 'Marcar por fazer' : 'Marcar feito'}</button>
+        <button class="link danger" data-a="delPlan">Apagar</button></div>` : ''}
+    </div>
   </div>`;
 }
 
@@ -429,7 +521,7 @@ function vWeek(){
   const end = pkey(addDays(start,6)), st = pkey(start);
   const range = `${st.getDate()}${st.getMonth() !== end.getMonth() ? ' ' + st.toLocaleDateString('pt-PT',{month:'short'}) : ''} a ${end.getDate()} ${end.toLocaleDateString('pt-PT',{month:'short'})}`;
   const lbl = ['seg','ter','qua','qui','sex','sáb','dom'];
-  const sel = days.find(d => d.key === ui.sel), sl = sel.items.reduce((a,p) => a + pLoad(p), 0);
+  const cls = key => `${flag.has(key) ? 'flag' : ''} ${key === today ? 'today' : ''}`;
   return `<div class="whead"><h1>Semana</h1>
     <div class="wnav"><button class="nb" data-a="wk" data-d="-1" aria-label="Semana anterior">‹</button>
       <button class="range" data-a="wkToday" title="Voltar a esta semana">${range}</button>
@@ -437,22 +529,24 @@ function vWeek(){
   <div class="kline"><span><b>${Math.round(tot).toLocaleString('pt-PT')}</b>carga</span><span><b>${hm(mins)}</b>total</span>
     ${prev ? `<span><b>${tot >= prev ? '+' : '−'}${Math.abs(Math.round((tot/prev-1)*100))}%</b>vs anterior</span>` : ''}
     ${bySport.map(([s,m]) => `<span><span class="dot" style="background:var(--${s})"></span>${SPORT[s]} ${hm(m)}</span>`).join('')}</div>
+
+  <div class="agenda">${days.map(({key,items},i) => `<div class="arow ${cls(key)}" data-day="${key}">
+      <div class="ad"><span>${lbl[i]}</span><b>${pkey(key).getDate()}</b></div>
+      <div class="ai">${items.map(p => `<button class="aitem ${p.done ? 'done' : ''}" style="--c:var(--${p.sport})" data-drag="plan" data-id="${p.id}" data-a="pickPlan">
+          <b>${esc(pName(p))}${p.done ? ' ✓' : ''}</b><span>${intOf(p.sport,p.int)[1]}, ${p.min} min</span></button>`).join('')
+        || `<button class="arest" data-a="newPlan" data-key="${key}">Descanso</button>`}</div>
+      <button class="icon add" data-a="newPlan" data-key="${key}" aria-label="Adicionar treino a ${dayName(key)}">+</button></div>`).join('')}</div>
+
   <div class="cal">${days.map(({key,items},i) => { const dl = items.reduce((a,p) => a + pLoad(p), 0);
-    return `<div class="cell ${key === ui.sel ? 'sel' : ''} ${flag.has(key) ? 'flag' : ''} ${key === today ? 'today' : ''}" data-day="${key}" data-a="selDay" data-key="${key}">
+    return `<div class="cell ${cls(key)}" data-day="${key}" data-a="newPlan" data-key="${key}">
       <div class="ch"><span>${lbl[i]}</span><b>${pkey(key).getDate()}</b></div>
       ${items.map(p => chipHTML(p, `data-drag="plan" data-id="${p.id}" data-a="pickPlan"`)).join('')}
       <div class="cl">${dl ? Math.round(dl) : ''}</div></div>`; }).join('')}</div>
-  <div class="palette-wrap"><p class="m">Arrasta um bloco para um dia, ou toca para juntar a ${dayName(ui.sel)}.</p>
-    <div class="palette">${S.blocks.map(b => chipHTML(b, `data-drag="block" data-id="${b.id}" data-a="addBlock"`)).join('')}</div></div>
-  <div class="card day" id="dayp">
-    <div class="dayh"><div class="grow"><span class="t">${cap(dayName(ui.sel))}</span> <span class="m">${pkey(ui.sel).getDate()}</span></div>
-      <span class="m">${sl ? Math.round(sl) : 'Descanso'}</span>
-      <button class="icon add" data-a="newPlan" data-key="${ui.sel}" aria-label="Adicionar treino">+</button></div>
-    ${sel.items.map(pItem).join('')}
-    ${!sel.items.length && !ui.draft ? '<p class="m" style="margin:10px 0 0">Dia de descanso. Arrasta um bloco ou toca em +.</p>' : ''}
-    ${ui.draft && ui.draft.date === ui.sel ? planForm(start) : ''}
-  </div>
+  <div class="palette-wrap"><p class="m">Arrasta um bloco para um dia. Para criar um treino à medida, clica no dia.</p>
+    <div class="palette">${S.blocks.map(b => chipHTML(b, `data-drag="block" data-id="${b.id}"`)).join('')}</div></div>
+
   ${iss.length ? `<div class="card issues">${iss.map(x => `<p class="${x.lvl}"><span>${x.lvl === 'high' ? '●' : '○'}</span><span>${esc(x.msg)}</span></p>`).join('')}</div>` : ''}
+  <p class="m tip">Toca num dia para adicionar. Mantém o dedo num treino para o arrastar para outro dia.</p>
   <button class="btn full" data-a="copyWeek">Copiar semana anterior</button>`;
 }
 
@@ -581,7 +675,7 @@ function vProgress(){
 
 function vPlan(){
   const exOpts = S.exercises.map(e => `<option value="${e.id}">${esc(e.name)}</option>`).join('');
-  const field = (t,k,f,v,l) => `<label>${l}<input inputmode="numeric" value="${v}" data-c="item" data-id="${t}" data-k="${k}" data-f="${f}"></label>`;
+  const field = (t,k,f,v,l) => `<input inputmode="numeric" value="${v}" data-c="item" data-id="${t}" data-k="${k}" data-f="${f}" aria-label="${l}">`;
   const groups = [...new Set(S.exercises.map(e => e.group || 'Outros'))];
   const uLbl = {kg:'carga', bw:'peso corporal', time:'tempo'};
   return `<h1>Plano</h1><p class="sub">Os teus treinos, séries, intervalos de repetições e descanso.</p>` +
@@ -591,12 +685,12 @@ function vPlan(){
       <span class="chev ${open ? 'up' : ''}">›</span></button>
       ${open ? `<div class="detail">
         <input class="tname" value="${esc(t.name)}" data-c="tname" data-id="${t.id}" aria-label="Nome do treino">
-        <label class="m">Carga nas pernas, usada no calendário<select data-c="tlegs" data-id="${t.id}" style="margin-top:4px">${INT.gym.map(([k,n]) => `<option value="${k}" ${t.legs === k ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
-        ${t.items.map((x,k) => `<div class="item"><div class="iname">${esc(ex(x.exId).name)}</div>
-          <div class="igrid">${field(t.id,k,'sets',x.sets,'Séries')}${field(t.id,k,'min',x.min,'Mín.')}${field(t.id,k,'max',x.max,'Máx.')}${field(t.id,k,'rest',x.rest,'Descanso (s)')}</div>
-          <div class="iact"><button class="link muted" data-a="mv" data-id="${t.id}" data-k="${k}" data-d="-1" aria-label="Mover para cima">↑</button>
-            <button class="link muted" data-a="mv" data-id="${t.id}" data-k="${k}" data-d="1" aria-label="Mover para baixo">↓</button>
-            <button class="link danger" data-a="rmItem" data-id="${t.id}" data-k="${k}">Remover</button></div></div>`).join('')}
+        <label class="m">Impacto nas pernas, para os alertas da Semana<select data-c="tlegs" data-id="${t.id}" style="margin-top:4px">${INT.gym.map(([k,n]) => `<option value="${k}" ${t.legs === k ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+        ${t.items.map((x,k) => `<div class="item"><div class="ihead"><span class="iname">${esc(ex(x.exId).name)}</span>
+          <button class="icon" data-a="mv" data-id="${t.id}" data-k="${k}" data-d="-1" aria-label="Mover para cima">↑</button>
+          <button class="icon" data-a="mv" data-id="${t.id}" data-k="${k}" data-d="1" aria-label="Mover para baixo">↓</button>
+          <button class="icon" data-a="rmItem" data-id="${t.id}" data-k="${k}" aria-label="Remover">×</button></div>
+          <div class="isent">${field(t.id,k,'sets',x.sets,'Séries')}<span>séries de</span>${field(t.id,k,'min',x.min,'Mínimo')}<span>a</span>${field(t.id,k,'max',x.max,'Máximo')}<span>${ex(x.exId).unit === 'time' ? 'seg' : 'reps'}, descanso</span>${field(t.id,k,'rest',x.rest,'Descanso em segundos')}<span>s</span></div></div>`).join('')}
         <select data-c="addItem" data-id="${t.id}" aria-label="Adicionar exercício"><option value="">Adicionar exercício…</option>${exOpts}</select>
         <button class="link danger" data-a="delT" data-id="${t.id}">Apagar treino</button></div>` : ''}
     </div>`; }).join('') +
@@ -604,7 +698,7 @@ function vPlan(){
   <h2>Blocos do calendário</h2>
   <div class="card">${S.blocks.map(b => `<div class="dl"><span><span class="dot" style="background:var(--${b.sport})"></span>${esc(pName(b))}, ${intOf(b.sport,b.int)[1].toLowerCase()}, ${b.min} min</span>
     <button class="icon" data-a="rmBlock" data-id="${b.id}" aria-label="Apagar bloco">×</button></div>`).join('')}
-    <p class="m">Para criar um bloco, prepara um treino num dia da Semana e toca em Guardar como bloco.</p></div>
+    <p class="m">Para criar um bloco, ao adicionar um treino na Semana marca Guardar também como bloco rápido.</p></div>
   <h2>Exercícios</h2>
   <div class="card lib">${groups.map(g => `<div class="m" style="margin-top:8px">${esc(g)}</div>` +
     S.exercises.filter(e => (e.group || 'Outros') === g).map(e => `<div class="dl"><span>${esc(e.name)} <span class="m">${uLbl[e.unit]}</span></span>
@@ -623,6 +717,11 @@ function render(){
   const v = {today:vToday, week:vWeek, history:vHistory, progress:vProgress, plan:vPlan}[tab];
   $('#app').className = tab === 'week' ? 'wide' : '';
   $('#app').innerHTML = v();
+  const sb = $('.sh-body'), keep = sb ? sb.scrollTop : 0;
+  $('#sheet').innerHTML = vSheet();
+  if(sb) $('#sheet').classList.add('still'); else $('#sheet').classList.remove('still');   // só anima ao abrir
+  if($('.sh-body')) $('.sh-body').scrollTop = keep;
+  document.body.classList.toggle('sheet-open', !!ui.draft);
   syncWake();
   document.querySelectorAll('#tabs button').forEach(b => b.dataset.id === tab ? b.setAttribute('aria-current','page') : b.removeAttribute('aria-current'));
 }
@@ -662,11 +761,16 @@ function saveDraft(){ const d = ui.draft; d.min = Math.max(0, parseInt(d.min) ||
 const A = {
   wk: d => { ui.week = addDays(ui.week, 7 * +d.d); ui.draft = null; render(); },
   wkToday: () => { ui.week = weekStartKey(new Date()); ui.draft = null; render(); },
-  newPlan: d => { ui.draft = {date:d.key, sport:'run', int:'z2', min:45, tpl:'', note:''}; render(); },
+  newPlan: d => { ui.sel = d.key; ui.draft = {date:d.key, sport:'run', int:'z2', min:45, tpl:'', note:''}; render(); },
+  dIntB: d => { ui.draft.int = d.k; render(); },
+  dTplB: d => { ui.draft.tpl = d.id; const t = tpl(d.id); if(t) ui.draft.int = t.legs; render(); },
+  dMinStep: d => { ui.draft.min = Math.max(5, (parseInt(ui.draft.min) || 0) + (+d.d)); render(); },
+  dMinSet: d => { ui.draft.min = +d.m; render(); },
+  quickAdd: d => { const b = S.blocks.find(x => x.id === d.id), day = ui.draft.date; addFromBlock(b, day);
+    ui.draft = null; save(); render(); toast(`${pName(b)} marcado para ${dayName(day)}`); },
   editPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = {...p}; render(); },
   selDay: d => { ui.sel = d.key; ui.draft = null; render(); },
-  pickPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = {...p}; render();
-    $('#dayp')?.scrollIntoView({behavior:'smooth', block:'nearest'}); },
+  pickPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = {...p}; render(); },
   addBlock: d => { const b = S.blocks.find(x => x.id === d.id); addFromBlock(b, ui.sel); save(); render(); toast(`Juntado a ${dayName(ui.sel)}`); },
   saveBlock: () => { const d = ui.draft, min = parseInt(d.min) || 0; if(!min){ toast('Indica a duração em minutos'); return; }
     S.blocks.push({id:uid(), sport:d.sport, int:d.int, min, tpl:d.sport === 'gym' ? d.tpl : '', note:d.note || ''}); save(); render(); toast('Bloco guardado'); },
@@ -678,7 +782,9 @@ const A = {
     if(d.s === 'gym'){ const t = S.templates[0]; dr.tpl = dr.tpl || (t ? t.id : ''); dr.int = (tpl(dr.tpl) || {}).legs || 'heavy'; }
     else if(!INT[d.s].some(x => x[0] === dr.int)) dr.int = 'z2';
     render(); },
-  savePlan: () => { if(saveDraft()){ ui.draft = null; render(); } },
+  savePlan: () => { const dr = ui.draft, r = saveDraft(); if(!r) return;
+    if(dr.asBlock) S.blocks.push({id:uid(), sport:r.sport, int:r.int, min:r.min, tpl:r.tpl, note:r.note});
+    const isNew = !dr.id; ui.draft = null; save(); render(); toast(isNew ? `Adicionado a ${dayName(r.date)}` : 'Alterações guardadas'); },
   donePlan: () => { ui.draft.done = !ui.draft.done; if(saveDraft()){ ui.draft = null; render(); } },
   delPlan: () => { S.plan = S.plan.filter(p => p.id !== ui.draft.id); ui.draft = null; save(); render(); },
   startPlan: () => { const r = saveDraft(); if(!r) return; ui.draft = null; startTpl(r.tpl, r.id); },
@@ -728,6 +834,7 @@ const A = {
 const C = {
   dInt: t => { ui.draft.int = t.value; render(); },
   dMin: t => { ui.draft.min = t.value; },
+  dBlock: t => { ui.draft.asBlock = t.checked; },
   dNote: t => { ui.draft.note = t.value; },
   dTpl: t => { ui.draft.tpl = t.value; const x = tpl(t.value); if(x) ui.draft.int = x.legs; render(); },
   tlegs: t => { tpl(t.dataset.id).legs = t.value; save(); },
@@ -751,8 +858,8 @@ const C = {
     r.readAsText(f); },
 };
 document.addEventListener('click', ev => { const b = ev.target.closest('[data-a]'); if(b) A[b.dataset.a]?.(b.dataset, b); });
-document.addEventListener('input', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'TEXTAREA' || (t.tagName === 'INPUT' && t.type !== 'file'))) C[t.dataset.c]?.(t); });
-document.addEventListener('change', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'SELECT' || t.type === 'file')) C[t.dataset.c]?.(t); });
+document.addEventListener('input', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'TEXTAREA' || (t.tagName === 'INPUT' && t.type !== 'file' && t.type !== 'checkbox'))) C[t.dataset.c]?.(t); });
+document.addEventListener('change', ev => { const t = ev.target; if(t.dataset.c && (t.tagName === 'SELECT' || t.type === 'file' || t.type === 'checkbox')) C[t.dataset.c]?.(t); });
 
 /* ---------- Arrastar blocos e treinos ---------- */
 const drag = {pending:null, active:null, swallow:false};
@@ -813,6 +920,8 @@ function endDrag(x, y){
   else { const q = S.plan.find(q => q.id === d.id); if(q.date === day) return; q.date = day; }
   ui.sel = day; ui.draft = null; save(); render();
 }
+
+document.addEventListener('keydown', ev => { if(ev.key === 'Escape' && ui.draft){ ui.draft = null; render(); } });
 
 render();
 if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(() => {});

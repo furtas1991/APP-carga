@@ -1,5 +1,5 @@
 // Network-first: apanha sempre a versão nova quando há rede, funciona offline no ginásio.
-const CACHE = 'carga-v3';
+const CACHE = 'carga-v4';
 const ASSETS = ['./', './index.html', './manifest.json', './icon.svg', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS))); self.skipWaiting(); });
 self.addEventListener('activate', e => {
