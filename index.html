@@ -374,6 +374,93 @@ button.dl{width:100%;text-align:left}
 .trep{display:flex;gap:12px;align-items:flex-start;background:var(--field);border-radius:14px;padding:10px 12px}
 .trep > b{font-size:24px;min-width:40px;line-height:1.3}
 .trep > div{flex:1;display:grid;gap:6px}
+/* Calendário ao estilo TrainingPeaks */
+.mcal .whead{flex-wrap:nowrap}.mcal .whead h1{font-size:24px;white-space:nowrap}.dcal .whead h1{font-size:30px}
+.mcal .nb{width:36px;height:36px;font-size:20px}.mcal .today-b{padding:0 12px}
+.today-b{width:auto!important;padding:0 14px;font-size:14px;font-weight:600;border-radius:999px!important}
+.strip{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:10px 0 10px;margin:8px -4px 6px;
+  background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.sd{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 7px;border-radius:14px}
+.sd span{font-size:11px;color:var(--muted);font-weight:600}
+.sd b{font-size:17px;width:32px;height:32px;line-height:32px;border-radius:50%;font-variant-numeric:tabular-nums}
+.sd i{display:flex;gap:3px;height:6px}
+.sd em{width:6px;height:6px;border-radius:50%}
+.sd.today b{color:var(--accent)}
+.sd.sel b{background:var(--text);color:var(--bg)}
+.sd.today.sel b{background:var(--accent);color:#fff}
+.sd.flag span{color:var(--danger)}
+.sd.over{background:color-mix(in srgb,var(--accent) 18%,transparent)}
+.feed{display:grid;gap:14px}
+.fday{scroll-margin-top:96px;border-radius:16px;transition:background .15s}
+.fday.over{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.fh{display:flex;align-items:center;justify-content:space-between;padding:0 2px 6px;font-size:15px;font-weight:600}
+.fh .tday{color:var(--accent)}
+.fday.flag .fh span{color:var(--danger)}
+.fh .add{width:30px;height:30px;font-size:18px}
+.frest{width:100%;text-align:left;color:var(--muted);font-size:15px;background:var(--card);border-radius:14px;padding:14px 16px;opacity:.75}
+.wcard{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--card);border-radius:14px;padding:12px 14px;margin-bottom:6px;
+  box-shadow:inset 3px 0 0 var(--c);user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;cursor:grab}
+.wic{width:36px;height:36px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--c) 16%,var(--card));color:var(--c)}
+.wic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.wb{flex:1;min-width:0;display:flex;flex-direction:column}
+.wb b{font-size:16px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wb > span{font-size:13px;color:var(--muted)}
+.wb .prof{height:24px;margin-top:6px}
+.wdone{width:24px;height:24px;border-radius:50%;background:var(--ok);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.wcard.done b{color:var(--muted)}
+.wcard.lifted{opacity:.3}
+.snap{margin-top:22px}
+.snap .kpis{margin:12px 0 14px;gap:22px;flex-wrap:wrap}
+.sbar{display:grid;grid-template-columns:92px 1fr 52px;align-items:center;gap:10px;font-size:14px;margin:8px 0}
+.sl{display:flex;align-items:center;white-space:nowrap;overflow:hidden}
+.strk{position:relative;height:8px;border-radius:99px;background:var(--field);overflow:hidden}
+.strk i{position:absolute;left:0;top:0;bottom:0;border-radius:99px}
+.sv{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.snap .issues{margin-top:10px;border-top:1px solid var(--line)}
+.fab{position:fixed;right:18px;bottom:calc(76px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:var(--accent);color:#fff;
+  font-size:30px;font-weight:300;box-shadow:0 8px 24px rgba(0,0,0,.22);z-index:6;display:flex;align-items:center;justify-content:center}
+.dcal{display:none}
+main.wide{padding-bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+@media (min-width:760px){
+  main.wide{max-width:1320px;padding-bottom:120px}
+  .mcal{display:none}.dcal{display:block}
+  .dwrap{display:grid;grid-template-columns:1fr 230px;gap:16px;align-items:start;margin-top:14px}
+  .dgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr)) 128px;gap:4px}
+  .dh{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:0 6px 4px}
+  .dc{background:var(--card);border-radius:12px;min-height:150px;padding:6px;display:flex;flex-direction:column;gap:4px;cursor:pointer;position:relative}
+  .dc.past{background:color-mix(in srgb,var(--card) 70%,var(--bg))}
+  .dc.today{box-shadow:inset 0 0 0 2px var(--accent)}
+  .dc.flag{box-shadow:inset 0 0 0 2px var(--danger)}
+  .dc.over{background:color-mix(in srgb,var(--accent) 16%,var(--card))}
+  .dn{font-size:13px;font-weight:600;color:var(--muted);padding:2px 4px}
+  .dc.today .dn{color:var(--accent)}
+  .dadd{position:absolute;right:8px;top:4px;color:var(--accent);font-size:18px;opacity:0;transition:opacity .15s}
+  .dc:hover .dadd{opacity:1}
+  .wcard.mini{padding:7px 8px;gap:7px;margin:0;border-radius:9px}
+  .wcard.mini .wic{width:24px;height:24px}.wcard.mini .wic svg{width:14px;height:14px}
+  .wcard.mini b{font-size:13px}.wcard.mini .wb > span{font-size:11.5px}
+  .wcard.mini .wdone{width:16px;height:16px;font-size:10px}
+  .ds{background:var(--card);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted)}
+  .ds b{font-size:18px;color:var(--text);font-variant-numeric:tabular-nums}
+  .dsl{display:flex;align-items:center;gap:6px}.dsl em{width:7px;height:7px;border-radius:50%}
+  .dsw{color:var(--danger);font-weight:600;margin-top:4px}
+  .libp{position:sticky;top:20px;background:var(--card);border-radius:16px;padding:14px;display:grid;gap:8px}
+  .libp .m{margin:0}
+  .libp .tchip{width:auto}
+  .fab{display:none}
+}
+.alist{display:grid;gap:6px}
+.arow2{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--card);border-radius:14px;padding:12px 14px;box-shadow:inset 3px 0 0 var(--c)}
+.arow2 .plus{font-size:24px;color:var(--accent);font-weight:300}
+.ihd{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.ihd .wic{width:46px;height:46px}.ihd .wic svg{width:24px;height:24px}
+.ihd .t{font-size:20px}
+.ipv .tst{font-size:16px}.ipv .trep > b{font-size:19px}.ipv .prof{height:44px;margin-top:10px}
+.daychips{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.dchip{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;border-radius:12px;background:var(--card);font-size:11px;color:var(--muted)}
+.dchip b{font-size:16px;color:var(--text)}
+.dchip[aria-pressed="true"]{background:var(--text);color:var(--bg)}.dchip[aria-pressed="true"] b{color:var(--bg)}
+.frow.left{justify-content:flex-start;margin-top:14px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:380px){.sh,.set{grid-template-columns:18px 1fr 1fr 1fr 44px;gap:6px}.stats b{font-size:22px}}
 </style>
@@ -473,7 +560,7 @@ function load(){ try{ const r = localStorage.getItem(KEY); if(r) return JSON.par
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){ toast('Não foi possível guardar neste dispositivo'); } }
 let S = load(); migrate();
 let tab = 'today';
-const ui = {settings:false, pick:null, showAlerts:false, open:null, tpl:null, prog:null, week:null, draft:null, sel:null, seg:'gym', spOpen:null, stepOpen:null};
+const ui = {addDay:null, showLow:false, settings:false, pick:null, showAlerts:false, open:null, tpl:null, prog:null, week:null, draft:null, sel:null, seg:'gym', spOpen:null, stepOpen:null};
 const timer = {end:0, iv:null};
 
 /* ---------- Utilitários ---------- */
@@ -743,10 +830,43 @@ function stepsToday(p){
     ? `<div class="trep"><b>${s.times}×</b><div>${s.steps.map(one).join('')}</div></div>` : one(s)).join('')}</div>`;
 }
 
+/* Folhas simples do calendário: adicionar a um dia, e ver um treino marcado */
+const sheetWrap = (title, sub, body, foot) => `<div class="sheet-bg" data-a="closePlan"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="${esc(title)}">
+    <div class="sh-head"><div><div class="t">${esc(title)}</div><div class="m">${esc(sub)}</div></div>
+      <button class="icon close" data-a="closePlan" aria-label="Fechar">×</button></div>
+    <div class="sh-body">${body}</div>${foot ? `<div class="sh-foot">${foot}</div>` : ''}</div>`;
+function vAdd(){
+  const dr = ui.draft, lib = libItems();
+  return sheetWrap('Adicionar treino', `${cap(dayName(dr.date))}, ${pkey(dr.date).getDate()}`,
+    lib.length ? `<div class="alist">${lib.map(it => `<button class="arow2" style="--c:${col(it.sport)}" data-a="quickAdd" data-kind="${it.kind}" data-id="${it.id}">
+        <span class="wic">${icon(it.sport)}</span><span class="wb"><b>${esc(it.name)}</b><span>${esc(intOf(it.sport,it.int)[1])}, ${fmtMin(it.min)}</span></span><span class="plus">+</span></button>`).join('')}</div>`
+      : `<div class="emptyc"><p class="t">Ainda não tens treinos guardados</p><p class="m">Cria um e fica logo marcado neste dia.</p></div>`,
+    `<button class="btn ${lib.length ? '' : 'primary'} full big" data-a="createFor" data-key="${dr.date}">Criar treino novo</button>`);
+}
+function vItem(){
+  const p = S.plan.find(x => x.id === ui.draft.id); if(!p){ ui.draft = null; return ''; }
+  const t = isGym(p) && tpl(p.tpl), start = weekStartKey(pkey(p.date)), days = [...Array(7)].map((_,i) => addDays(start,i));
+  const body = `<div class="ihd" style="--c:${col(p.sport)}"><span class="wic">${icon(p.sport)}</span>
+      <div><div class="t">${esc(pName(p))}</div><div class="m">${esc(spName(p.sport))}, ${esc(intOf(p.sport,p.int)[1].toLowerCase())}, ${fmtMin(p.min)}</div></div></div>
+    ${p.steps && p.steps.length && !isGym(p) ? `<div class="ipv">${stepsToday(p)}</div>` : ''}
+    ${t ? `<div class="tlist">${t.items.map(x => `<div class="dl"><span>${esc(ex(x.exId).name)}</span><span class="m">${x.sets}×${x.min}–${x.max}</span></div>`).join('') || '<p class="m">Sem exercícios.</p>'}</div>` : ''}
+    ${p.note ? `<p class="note">${esc(p.note)}</p>` : ''}
+    <div class="lbl">Mudar de dia</div>
+    <div class="daychips">${days.map((k,i) => `<button class="dchip" data-a="moveTo" data-key="${k}" aria-pressed="${k === p.date}"><span>${LETTERS[i]}</span><b>${pkey(k).getDate()}</b></button>`).join('')}</div>
+    <div class="frow left"><button class="link" data-a="editItem">Editar</button><button class="link danger" data-a="removeItem">Remover do dia</button></div>`;
+  const foot = t && !t.items.length ? `<button class="btn primary full big" data-a="fillTpl" data-id="${t.id}">Juntar exercícios</button>`
+    : t && !p.done ? `<button class="btn primary full big" data-a="startPlanId" data-id="${p.id}">Começar treino</button>`
+    : `<button class="btn ${p.done ? '' : 'primary'} full big" data-a="toggleItem">${p.done ? 'Feito ✓ · desmarcar' : 'Marcar como feito'}</button>`;
+  return sheetWrap(`${cap(dayName(p.date))}, ${pkey(p.date).getDate()}`, p.done ? 'Feito' : 'Planeado', body, foot);
+}
+
 /* Folha para criar ou editar um treino do calendário, ou um bloco rápido */
 function vSheet(){
   const dr = ui.draft; if(!dr) return '';
   if(dr.mode === 'create') return vCreate();
+  if(dr.mode === 'add') return vAdd();
+  if(dr.mode === 'item') return vItem();
   const isBlock = dr.mode === 'block', isNew = !dr.id, gym = isGym(dr);
   const title = isBlock ? (isNew ? 'Novo treino' : 'Editar treino') : (isNew ? 'Novo treino' : 'Editar treino');
   const warn = isBlock ? [] : newIssues(S.plan.filter(p => p.id !== dr.id), {...dr, min:num(dr.min)}).filter(x => x.keys.includes(dr.date) || !x.keys.length);
@@ -802,43 +922,93 @@ const libName = (kind, id) => kind === 'tpl' ? tpl(id).name.split(',')[0] : pNam
 const trayChip = it => `<button class="tchip" style="--c:${col(it.sport)}" data-drag="lib" data-kind="${it.kind}" data-id="${it.id}" data-a="pickLib"
   aria-pressed="${!!ui.pick && ui.pick.id === it.id}"><b>${esc(it.name)}</b><span>${esc(intOf(it.sport,it.int)[1])}, ${it.min}'</span></button>`;
 
+/* ---------- Calendário ao estilo TrainingPeaks ---------- */
+const ICONS = {
+  swim:'<path d="M2 17c2 0 2-1.4 4-1.4S8 17 10 17s2-1.4 4-1.4 2 1.4 4 1.4 2-1.4 4-1.4"/><path d="M2 21c2 0 2-1.4 4-1.4S8 21 10 21s2-1.4 4-1.4 2 1.4 4 1.4 2-1.4 4-1.4"/><circle cx="17" cy="7" r="2"/><path d="M5 13l5-5 3 2.5 3-1.5"/>',
+  bike:'<circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h5l3 7M10 9l3 7H6M13 5.5h3"/>',
+  run:'<circle cx="14.5" cy="4.5" r="1.8"/><path d="M7 21l3.5-6 3 2.5 1 3.5M10.5 15l1.5-5.5-3.5 1.5-2 3M12 9.5l3 2.5h3"/>',
+  gym:'<path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/>',
+  other:'<circle cx="12" cy="12" r="4.5"/>'};
+const icon = s => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[sp(s).kind === 'gym' ? 'gym' : ICONS[s] ? s : 'other']}</svg>`;
+const fmtMin = m => { m = Math.round(num(m)); return m < 60 ? `${m} min` : `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`; };
+const hm = m => `${Math.floor(m/60)}h${String(Math.round(m%60)).padStart(2,'0')}`;
+const LETTERS = ['S','T','Q','Q','S','S','D'], WD = ['seg','ter','qua','qui','sex','sáb','dom'];
+
+function wCard(p, mini){
+  const tt = p.steps && p.steps.length && !isGym(p) ? wTotals(p) : null;
+  return `<button class="wcard ${p.done ? 'done' : ''} ${mini ? 'mini' : ''}" style="--c:${col(p.sport)}" data-drag="plan" data-id="${p.id}" data-a="pickPlan">
+    <span class="wic">${icon(p.sport)}</span>
+    <span class="wb"><b>${esc(pName(p))}</b>
+      <span>${esc(intOf(p.sport,p.int)[1])}, ${fmtMin(p.min)}${tt && tt.m ? `, ${fmtDist(tt.m)}` : ''}</span>
+      ${!mini && tt ? profile(p, 24) : ''}</span>
+    ${p.done ? '<span class="wdone" aria-label="Feito">✓</span>' : ''}</button>`;
+}
+function weekStats(start){
+  const items = S.plan.filter(p => inWeek(p.date, start));
+  const by = sportIds().map(s => { const l = items.filter(p => p.sport === s); return {s, min:l.reduce((a,p) => a + num(p.min), 0), done:l.filter(p => p.done).reduce((a,p) => a + num(p.min), 0)}; }).filter(x => x.min);
+  return {items, min:items.reduce((a,p) => a + num(p.min), 0), done:items.filter(p => p.done).reduce((a,p) => a + num(p.min), 0),
+    load:weekLoad(S.plan, start), prev:weekLoad(S.plan, addDays(start,-7)), by, iss:issues(S.plan, start)};
+}
+function snapshot(start){
+  const w = weekStats(start), max = Math.max(1, ...w.by.map(x => x.min));
+  return `<div class="card snap"><div class="t">Resumo da semana</div>
+    <div class="kpis"><div><span>Planeado</span><b>${hm(w.min)}</b></div><div><span>Feito</span><b>${hm(w.done)}</b></div>
+      <div><span>Carga</span><b>${Math.round(w.load)}</b></div>${w.prev ? `<div><span>vs anterior</span><b>${w.load >= w.prev ? '+' : '−'}${Math.abs(Math.round((w.load/w.prev-1)*100))}%</b></div>` : ''}</div>
+    ${w.by.map(x => `<div class="sbar"><span class="sl"><span class="dot" style="background:${col(x.s)}"></span>${esc(spName(x.s))}</span>
+      <span class="strk"><i style="width:${x.min/max*100}%;background:${col(x.s)};opacity:.3"></i><i style="width:${x.done/max*100}%;background:${col(x.s)}"></i></span><span class="sv">${hm(x.min)}</span></div>`).join('')}
+    ${(() => { const hi = w.iss.filter(x => x.lvl === 'high'), lo = w.iss.filter(x => x.lvl !== 'high');
+      return (hi.length || lo.length) ? `<div class="issues">${hi.map(x => `<p class="high"><span>●</span><span>${esc(x.msg)}</span></p>`).join('')}
+        ${lo.length ? (ui.showLow ? lo.map(x => `<p class="low"><span>○</span><span>${esc(x.msg)}</span></p>`).join('') + '<button class="link" data-a="togLow">Esconder avisos</button>'
+          : `<button class="link muted" data-a="togLow">${lo.length} ${lo.length === 1 ? 'aviso' : 'avisos'} menores</button>`) : ''}</div>` : ''; })()}
+    <button class="link" data-a="copyWeek">Copiar a semana anterior para esta</button></div>`;
+}
+
 function vWeek(){
-  const start = ui.week = ui.week || weekStartKey(new Date()), today = dkey(new Date());
-  const days = [...Array(7)].map((_,i) => { const key = addDays(start,i); return {key, items:S.plan.filter(p => p.date === key)}; });
-  const all = days.flatMap(d => d.items);
-  const tot = weekLoad(S.plan,start), prev = weekLoad(S.plan,addDays(start,-7));
-  const mins = all.reduce((a,p) => a + num(p.min), 0);
-  const iss = issues(S.plan,start), high = iss.filter(x => x.lvl === 'high'), flag = new Set(high.flatMap(x => x.keys));
-  const hm = m => `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`;
-  const end = pkey(addDays(start,6)), st = pkey(start);
-  const range = `${st.getDate()}${st.getMonth() !== end.getMonth() ? ' ' + st.toLocaleDateString('pt-PT',{month:'short'}) : ''} a ${end.getDate()} ${end.toLocaleDateString('pt-PT',{month:'short'})}`;
-  const lbl = ['seg','ter','qua','qui','sex','sáb','dom'];
-  const cls = key => `${flag.has(key) ? 'flag' : ''} ${key === today ? 'today' : ''}`;
+  const today = dkey(new Date());
+  const start = ui.week = ui.week || weekStartKey(new Date());
+  if(!ui.sel || !inWeek(ui.sel, start)) ui.sel = inWeek(today, start) ? today : start;
+  const st = pkey(start), month = cap(st.toLocaleDateString('pt-PT', {month:'long', year:'numeric'}));
+  const nav = `<div class="wnav"><button class="nb" data-a="wk" data-d="-1" aria-label="Semana anterior">‹</button>
+    <button class="nb today-b" data-a="wkToday">Hoje</button><button class="nb" data-a="wk" data-d="1" aria-label="Semana seguinte">›</button></div>`;
+  const flagOf = s => new Set(issues(S.plan, s).filter(x => x.lvl === 'high').flatMap(x => x.keys));
+  const flag = flagOf(start);
+  const days = [...Array(7)].map((_,i) => { const key = addDays(start,i); return {key, i, items:S.plan.filter(p => p.date === key)}; });
+
+  /* telemóvel: faixa da semana + lista de dias, como a app do TrainingPeaks */
+  const mobile = `<div class="mcal">
+    <div class="whead"><h1>${month}</h1>${nav}</div>
+    <div class="strip">${days.map(({key,i,items}) => `<button class="sd ${key === today ? 'today' : ''} ${key === ui.sel ? 'sel' : ''} ${flag.has(key) ? 'flag' : ''}" data-day="${key}" data-a="selDayM" data-key="${key}" aria-label="${dayName(key)}">
+        <span>${LETTERS[i]}</span><b>${pkey(key).getDate()}</b><i>${items.slice(0,4).map(p => `<em style="background:${col(p.sport)}"></em>`).join('')}</i></button>`).join('')}</div>
+    <div class="feed">${days.map(({key,items}) => `<section class="fday ${flag.has(key) ? 'flag' : ''}" id="d-${key}" data-day="${key}">
+        <div class="fh"><span class="${key === today ? 'tday' : ''}">${cap(dayName(key))}, ${pkey(key).getDate()}</span>
+          <button class="icon add" data-a="newPlan" data-key="${key}" aria-label="Adicionar treino a ${dayName(key)}">+</button></div>
+        ${items.map(p => wCard(p)).join('') || `<button class="frest" data-a="newPlan" data-key="${key}">Descanso</button>`}</section>`).join('')}</div>
+    ${snapshot(start)}
+    <button class="fab" data-a="newPlan" data-key="${ui.sel}" aria-label="Adicionar treino">+</button>
+  </div>`;
+
+  /* computador: grelha de semanas com coluna de resumo e biblioteca ao lado, como o TrainingPeaks web */
+  const weeks = [0,1,2].map(w => addDays(start, 7*w));
   const lib = libItems();
-  return `<div class="whead"><h1>Semana</h1>
-    <div class="wnav"><button class="nb" data-a="wk" data-d="-1" aria-label="Semana anterior">‹</button>
-      <button class="range" data-a="wkToday" title="Voltar a esta semana">${range}</button>
-      <button class="nb" data-a="wk" data-d="1" aria-label="Semana seguinte">›</button></div></div>
-  <p class="wsum">${all.length ? `${hm(mins)} de treino, carga ${Math.round(tot).toLocaleString('pt-PT')}${prev ? `, ${tot >= prev ? '+' : '−'}${Math.abs(Math.round((tot/prev-1)*100))}% vs semana anterior` : ''}` : 'Semana vazia. Arrasta os teus treinos para os dias.'}</p>
-  ${iss.length ? `<button class="alerts ${high.length ? 'hi' : ''}" data-a="togAlerts" aria-expanded="${!!ui.showAlerts}">${high.length ? '●' : '○'} ${iss.length} ${iss.length === 1 ? 'alerta' : 'alertas'} de carga <span>${ui.showAlerts ? 'esconder' : 'ver'}</span></button>
-    ${ui.showAlerts ? `<div class="card issues">${iss.map(x => `<p class="${x.lvl}"><span>${x.lvl === 'high' ? '●' : '○'}</span><span>${esc(x.msg)}</span></p>`).join('')}</div>` : ''}` : ''}
-  ${ui.pick ? `<div class="pickbar"><span>Toca no dia para pôr <b>${esc(libName(ui.pick.kind, ui.pick.id))}</b></span><button data-a="pickCancel">Cancelar</button></div>` : ''}
-
-  <div class="agenda ${ui.pick ? 'picking' : ''}">${days.map(({key,items},i) => `<div class="arow ${cls(key)}" data-day="${key}" data-a="dayTap" data-key="${key}">
-      <div class="ad"><span>${lbl[i]}</span><b>${pkey(key).getDate()}</b></div>
-      <div class="ai">${items.map(p => `<button class="aitem ${p.done ? 'done' : ''}" style="--c:${col(p.sport)}" data-drag="plan" data-id="${p.id}" data-a="pickPlan">
-          <span class="dot"></span><b>${esc(pName(p))}</b><span class="am">${p.done ? '✓' : p.min + "'"}</span></button>`).join('')
-        || '<span class="arest">Descanso</span>'}</div></div>`).join('')}</div>
-
-  <div class="cal">${days.map(({key,items},i) => { const dl = items.reduce((a,p) => a + pLoad(p), 0);
-    return `<div class="cell ${cls(key)}" data-day="${key}" data-a="dayTap" data-key="${key}">
-      <div class="ch"><span>${lbl[i]}</span><b>${pkey(key).getDate()}</b></div>
-      ${items.map(p => chipHTML(p, `data-drag="plan" data-id="${p.id}" data-a="pickPlan"`)).join('')}
-      <div class="cl">${dl ? Math.round(dl) : ''}</div></div>`; }).join('')}</div>
-
-  <div class="tray-wrap"><div class="tray-h"><span>Os teus treinos: arrasta para um dia ou toca e escolhe o dia</span><button class="link" data-a="tab" data-id="plan">Gerir</button></div>
-    <div class="tray">${lib.length ? lib.map(trayChip).join('') : '<button class="btn primary" data-a="goCreate">Criar o primeiro treino</button>'}</div></div>
-  <div class="row center wfoot"><button class="link muted" data-a="copyWeek">Copiar semana anterior</button></div>`;
+  const desktop = `<div class="dcal">
+    <div class="whead"><h1>${month}</h1>${nav}</div>
+    <div class="dwrap"><div class="dgrid">
+      ${WD.map(d => `<div class="dh">${d}</div>`).join('')}<div class="dh">Resumo</div>
+      ${weeks.map(ws => { const fl = flagOf(ws), w = weekStats(ws);
+        return [...Array(7)].map((_,i) => { const key = addDays(ws,i), items = S.plan.filter(p => p.date === key);
+          return `<div class="dc ${key === today ? 'today' : ''} ${fl.has(key) ? 'flag' : ''} ${key < today ? 'past' : ''}" data-day="${key}" data-a="newPlan" data-key="${key}">
+            <div class="dn">${pkey(key).getDate()}${pkey(key).getDate() === 1 ? ' ' + pkey(key).toLocaleDateString('pt-PT',{month:'short'}) : ''}</div>
+            ${items.map(p => wCard(p, true)).join('')}<span class="dadd">+</span></div>`; }).join('') +
+          `<div class="ds"><b>${hm(w.min)}</b><span>carga ${Math.round(w.load)}</span>
+            ${w.by.map(x => `<span class="dsl"><em style="background:${col(x.s)}"></em>${esc(spName(x.s))} ${hm(x.min)}</span>`).join('')}
+            ${w.iss.filter(x => x.lvl === 'high').length ? `<span class="dsw">● ${w.iss.filter(x => x.lvl === 'high').length} alerta(s)</span>` : ''}</div>`; }).join('')}
+    </div>
+    <aside class="libp"><div class="t">Biblioteca</div><p class="m">Arrasta um treino para um dia.</p>
+      ${lib.map(it => `<div class="tchip" style="--c:${col(it.sport)}" data-drag="lib" data-kind="${it.kind}" data-id="${it.id}"><b>${esc(it.name)}</b><span>${esc(intOf(it.sport,it.int)[1])}, ${it.min}'</span></div>`).join('') || '<p class="m">Ainda sem treinos.</p>'}
+      <button class="btn primary full" data-a="createW">Criar treino</button></aside></div>
+    ${snapshot(start)}
+  </div>`;
+  return mobile + desktop;
 }
 
 /* ---------- Aba Treinos: a biblioteca ---------- */
@@ -848,7 +1018,7 @@ function vLib(){
   const groups = sportIds().map(s => [s, items.filter(i => i.sport === s)]).filter(g => g[1].length);
   return `<div class="whead"><h1>Treinos</h1><button class="icon gear" data-a="setOpen" aria-label="Ajustes">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button></div>
-    <p class="sub">Cria aqui os teus treinos. Ficam guardados e, na Semana, é só arrastá-los para o dia.</p>
+    <p class="sub">Cria aqui os teus treinos. Ficam guardados e, na Semana, tocas em + no dia para os marcar.</p>
     <button class="btn primary full big" data-a="createW">Criar treino</button>
     ${groups.map(([s,list]) => `<h2 class="lh"><span class="dot" style="background:${col(s)}"></span>${esc(spName(s))}</h2>${list.map(libCard).join('')}`).join('')}
     ${!items.length ? `<div class="emptyc"><p class="t">Ainda não tens treinos</p>
@@ -857,11 +1027,11 @@ function vLib(){
 function libCard(it){
   if(it.kind === 'tpl'){ const t = tpl(it.id), open = ui.tpl === t.id;
     return `<div class="card lcard" style="--c:${col('gym')}"><button class="rowbtn" data-a="openT" data-id="${t.id}" aria-expanded="${open}">
-      <div><div class="t">${esc(t.name)}</div><div class="m">${t.items.length} exercícios, ${num(t.min) || 60} min</div></div>
+      <div><div class="t">${esc(t.name)}</div><div class="m">${t.items.length ? `${t.items.length} ${t.items.length === 1 ? 'exercício' : 'exercícios'}` : 'Sem exercícios, toca para juntar'}, ${num(t.min) || 60} min</div></div>
       <span class="chev ${open ? 'up' : ''}">›</span></button>${open ? tplEditor(t) : ''}</div>`; }
   const b = it.b;
   return `<button class="card lcard" style="--c:${col(b.sport)}" data-a="editBlock" data-id="${b.id}">
-    <div class="rowbtn"><div><div class="t">${esc(it.name)}</div><div class="m">${esc(intOf(b.sport,b.int)[1])}, ${b.min} min${b.steps && b.steps.length ? `, ${flat(b.steps).length} passos` : ''}</div></div><span class="chev">›</span></div>
+    <div class="rowbtn"><div><div class="t">${esc(it.name)}</div><div class="m">${esc(intOf(b.sport,b.int)[1])}, ${b.min} min${b.steps && b.steps.length ? `, ${flat(b.steps).length} ${flat(b.steps).length === 1 ? 'passo' : 'passos'}` : ''}</div></div><span class="chev">›</span></div>
     ${b.steps && b.steps.length ? profile(b, 36) : ''}</button>`;
 }
 function vCreate(){
@@ -893,7 +1063,7 @@ function vToday(){
         ${p.note ? `<p class="tnote">${esc(p.note)}</p>` : ''}
         ${t ? `<div class="tlist">${t.items.map(x => { const e = ex(x.exId), s = suggest(x);
           return `<div class="dl"><span>${esc(e.name)}</span><span class="m">${x.sets}×${x.min}–${x.max}${s.kg ? `, ${fmt1(num(s.kg))} kg` : ''}</span></div>`; }).join('')}</div>` : ''}
-        ${p.done ? '<p class="tdone">Feito ✓</p>' : t ? `<button class="btn primary full big" data-a="startPlanId" data-id="${p.id}">Começar treino</button>`
+        ${p.done ? '<p class="tdone">Feito ✓</p>' : t && !t.items.length ? `<button class="btn primary full big" data-a="fillTpl" data-id="${t.id}">Juntar exercícios</button>` : t ? `<button class="btn primary full big" data-a="startPlanId" data-id="${p.id}">Começar treino</button>`
           : `<button class="btn full big" data-a="togglePlan" data-id="${p.id}">Marcar feito</button>`}</div>`; }
     return `<div class="card tcard ${p.done ? 'isdone' : ''}" style="--c:${col(p.sport)}">
       <div class="tk">${esc(spName(p.sport))}${p.title ? ', ' + esc(intOf(p.sport,p.int)[1]) : ''}</div><div class="tbig">${esc(p.title || intOf(p.sport,p.int)[1])}</div>
@@ -1158,6 +1328,9 @@ function exByName(name){
 }
 function setPath(o, path, v){ const ks = path.split('.'); ks.slice(0,-1).forEach(k => o = o[k]); o[ks[ks.length-1]] = v; }
 const A = {
+  fillTpl: d => { ui.draft = null; ui.settings = false; ui.tpl = d.id; tab = 'plan'; render(); setTimeout(() => $('[data-c=exq]')?.focus(), 50); },
+  selDayM: d => { ui.sel = d.key; document.querySelectorAll('.sd').forEach(b => b.classList.toggle('sel', b.dataset.key === d.key));
+    document.getElementById('d-' + d.key)?.scrollIntoView({behavior:'smooth', block:'start'}); },
   goCreate: () => { tab = 'plan'; ui.settings = false; ui.draft = {mode:'create'}; render(); },
   setOpen: () => { ui.settings = true; render(); scrollTo(0,0); },
   setClose: () => { ui.settings = false; render(); scrollTo(0,0); },
@@ -1165,7 +1338,7 @@ const A = {
   createSport: d => { if(sp(d.s).kind === 'gym'){ ui.draft.sport = d.s; render(); $('#newGymName')?.focus(); return; }
     const ints = INTS(d.s); ui.draft = {mode:'block', sport:d.s, int:(ints.find(x => x[0] === 'z2') || ints[0] || [''])[0], min:45, tpl:'', note:'', title:'', steps:[]}; render(); },
   createGym: () => { const n = $('#newGymName').value.trim(); if(!n){ toast('Escreve o nome do treino'); $('#newGymName').focus(); return; }
-    const t = {id:uid(), name:n, legs:'mod', min:60, items:[]}; S.templates.push(t);
+    const t = {id:uid(), name:n, legs:'mod', min:60, items:[]}; S.templates.push(t); if(ui.addDay){ addFromLib('tpl', t.id, ui.addDay); ui.addDay = null; }
     ui.draft = null; ui.tpl = t.id; ui.settings = false; tab = 'plan'; save(); render(); toast('Treino criado. Junta os exercícios'); },
   togAlerts: () => { ui.showAlerts = !ui.showAlerts; render(); },
   pickLib: d => { ui.pick = ui.pick && ui.pick.id === d.id ? null : {kind:d.kind, id:d.id}; render(); },
@@ -1208,7 +1381,7 @@ const A = {
     const fresh = e.isNew; delete e.isNew; save(); render(); toast(fresh ? `${e.name} criado e adicionado` : `${e.name} adicionado`); },
   wk: d => { ui.week = addDays(ui.week, 7 * +d.d); ui.draft = null; render(); },
   wkToday: () => { ui.week = weekStartKey(new Date()); ui.draft = null; render(); },
-  newPlan: d => { ui.sel = d.key; ui.draft = {date:d.key, sport:'run', int:'z2', min:45, tpl:'', note:''}; render(); },
+  newPlan: d => { ui.sel = d.key; ui.draft = {mode:'add', date:d.key}; render(); },
   dIntB: d => { ui.draft.int = d.k; render(); },
   dTplB: d => { ui.draft.tpl = d.id; const t = tpl(d.id); if(t) ui.draft.int = t.legs; render(); },
   dMinStep: d => { ui.draft.min = Math.max(5, (parseInt(ui.draft.min) || 0) + (+d.d)); render(); },
@@ -1217,14 +1390,20 @@ const A = {
     ui.draft = null; save(); render(); toast(`${name} marcado para ${dayName(day)}`); },
   editPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = clone(p); ui.stepOpen = null; render(); },
   selDay: d => { ui.sel = d.key; ui.draft = null; render(); },
-  pickPlan: d => { const p = S.plan.find(x => x.id === d.id); if(ui.pick) return A.dayTap({key:p.date}); ui.sel = p.date; ui.draft = clone(p); ui.stepOpen = null; render(); },
+  pickPlan: d => { const p = S.plan.find(x => x.id === d.id); ui.sel = p.date; ui.draft = {mode:'item', id:p.id}; render(); },
+  editItem: () => { const p = S.plan.find(x => x.id === ui.draft.id); ui.draft = clone(p); ui.stepOpen = null; render(); },
+  moveTo: d => { const p = S.plan.find(x => x.id === ui.draft.id); if(p.date === d.key) return; p.date = d.key; ui.sel = d.key; ui.draft = null; save(); render(); toast(`Passou para ${dayName(d.key)}`); },
+  removeItem: () => { S.plan = S.plan.filter(x => x.id !== ui.draft.id); ui.draft = null; save(); render(); toast('Removido do dia'); },
+  toggleItem: () => { const p = S.plan.find(x => x.id === ui.draft.id); p.done = !p.done; ui.draft = null; save(); render(); },
+  createFor: d => { ui.addDay = d.key; ui.draft = {mode:'create'}; render(); },
+  togLow: () => { ui.showLow = !ui.showLow; render(); },
   addBlock: d => { const b = S.blocks.find(x => x.id === d.id); addFromBlock(b, ui.sel); save(); render(); toast(`Juntado a ${dayName(ui.sel)}`); },
   saveBlock: () => { const d = ui.draft, min = parseInt(d.min) || 0; if(!min){ toast('Indica a duração em minutos'); return; }
     S.blocks.push({id:uid(), sport:d.sport, int:d.int, min, tpl:d.sport === 'gym' ? d.tpl : '', note:d.note || ''}); save(); render(); toast('Bloco guardado'); },
   rmBlock: d => { S.blocks = S.blocks.filter(b => b.id !== d.id); save(); render(); },
   startPlanId: d => { const p = S.plan.find(x => x.id === d.id); startTpl(p.tpl, p.id); },
   togglePlan: d => { const p = S.plan.find(x => x.id === d.id); p.done = !p.done; save(); render(); },
-  closePlan: () => { ui.draft = null; render(); },
+  closePlan: () => { ui.draft = null; ui.addDay = null; render(); },
   dSport: d => { const dr = ui.draft; dr.sport = d.s;
     if(sp(d.s).kind === 'gym'){ const t = S.templates[0]; dr.tpl = dr.tpl || (t ? t.id : ''); dr.int = (tpl(dr.tpl) || {}).legs || (INTS(d.s)[0] || [''])[0]; }
     else if(!INTS(d.s).some(x => x[0] === dr.int)) dr.int = (INTS(d.s).find(x => x[0] === 'z2') || INTS(d.s)[0] || [''])[0];
@@ -1234,7 +1413,8 @@ const A = {
       const min = hasSt ? Math.max(1, Math.round(wTotals(dr).sec/60)) : parseInt(dr.min) || 0; if(!min){ toast('Indica a duração em minutos'); return; }
       const b = {id:dr.id || uid(), sport:dr.sport, int:dr.int, min, tpl:isGym(dr) ? dr.tpl : '', title:(dr.title || '').trim(), note:dr.note || '', steps:hasSt ? dr.steps : []};
       const k = S.blocks.findIndex(x => x.id === b.id); if(k >= 0) S.blocks[k] = b; else S.blocks.push(b);
-      ui.draft = null; save(); render(); toast('Treino guardado. Arrasta-o na Semana'); return; }
+      if(ui.addDay){ addFromLib('blk', b.id, ui.addDay); const day = ui.addDay; ui.addDay = null; ui.draft = null; save(); render(); toast(`Guardado e marcado para ${dayName(day)}`); return; }
+      ui.draft = null; save(); render(); toast('Treino guardado'); return; }
     const r = saveDraft(); if(!r) return;
     if(dr.asBlock) S.blocks.push({id:uid(), sport:r.sport, int:r.int, min:r.min, tpl:r.tpl, title:r.title, note:r.note, steps:clone(r.steps)});
     const isNew = !dr.id; ui.draft = null; save(); render(); toast(isNew ? `Adicionado a ${dayName(r.date)}` : 'Alterações guardadas'); },
